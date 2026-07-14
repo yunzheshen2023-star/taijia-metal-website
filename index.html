@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="export.css">
   <link rel="stylesheet" href="technical.css">
+  <link rel="stylesheet" href="motion.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -32,7 +33,10 @@
   }
   </script>
 </head>
-<body>
+<body class="is-loading">
+  <div class="site-intro" id="siteIntro" aria-hidden="true"><div class="intro-mark"><span class="logo"><i>G</i><b>+</b></span><strong>TAIJIA METAL</strong></div><div class="intro-line"><i></i></div><p>MATERIALS · PROCESSING · EXPORT SUPPORT</p></div>
+  <div class="page-progress" aria-hidden="true"><i id="pageProgress"></i></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
   <header class="nav" id="nav">
     <a class="brand" href="#home" aria-label="Taijia Metal">
       <span class="logo"><i>G</i><b>+</b></span>
@@ -63,9 +67,10 @@
       </div>
       <div class="hero-metrics reveal"><div><b>300 / 400</b><span data-zh="不锈钢系列" data-en="Steel Series">不锈钢系列</span></div><div><b>4</b><span data-zh="核心加工服务" data-en="Core Processes">核心加工服务</span></div><div><b>ISO 9001</b><span data-zh="质量管理体系" data-en="Quality System">质量管理体系</span></div></div>
       <div class="visual-note" data-zh="行业加工场景示意" data-en="Industry process illustration">行业加工场景示意</div>
+      <a class="scroll-cue" href="#about"><span data-zh="向下探索" data-en="SCROLL TO EXPLORE">向下探索</span><i></i></a>
     </section>
 
-    <section class="partner-bar"><span data-zh="稳定连接优质钢厂资源" data-en="CONNECTED TO LEADING MILL RESOURCES">稳定连接优质钢厂资源</span><div><b>宝钢集团</b><b>宁波宝新</b><b>张家港浦项</b><b>山西太钢</b><b>昆山大庚</b><b>POSCO</b><b>OUTOKUMPU</b></div></section>
+    <section class="partner-bar"><span data-zh="稳定连接优质钢厂资源" data-en="CONNECTED TO LEADING MILL RESOURCES">稳定连接优质钢厂资源</span><div class="partner-track"><div class="partner-group"><b>BAOSTEEL</b><b>NINGBO BAOXIN</b><b>ZHANGJIAGANG POSCO</b><b>TAIYUAN IRON & STEEL</b><b>KUNSHAN DA GENG</b><b>POSCO</b><b>OUTOKUMPU</b></div><div class="partner-group" aria-hidden="true"><b>BAOSTEEL</b><b>NINGBO BAOXIN</b><b>ZHANGJIAGANG POSCO</b><b>TAIYUAN IRON & STEEL</b><b>KUNSHAN DA GENG</b><b>POSCO</b><b>OUTOKUMPU</b></div></div></section>
 
     <section class="section about" id="about">
       <div class="section-code">01 / ABOUT</div>
@@ -128,6 +133,16 @@
         <article><b>NO.8 / MIRROR</b><h4 data-zh="高反射镜面" data-en="Highly Reflective Mirror Finish">高反射镜面</h4><p data-zh="通过逐级精细抛光和抛光膏处理形成高反射表面，验收通常需要样板和观察条件。" data-en="Produced through progressively finer polishing and buffing; acceptance normally requires an agreed sample and viewing conditions.">通过逐级精细抛光和抛光膏处理形成高反射表面，验收通常需要样板和观察条件。</p></article>
       </div>
       <div class="technical-note reveal"><span data-zh="技术提示" data-en="TECHNICAL NOTE">技术提示</span><p data-zh="材料选型与表面描述用于前期沟通，不替代标准原文、工程计算、腐蚀评估或客户批准的技术规范。" data-en="Grade and finish guidance supports preliminary discussion and does not replace governing standards, engineering calculations, corrosion assessment or customer-approved specifications.">材料选型与表面描述用于前期沟通，不替代标准原文、工程计算、腐蚀评估或客户批准的技术规范。</p></div>
+      <div class="material-advisor reveal" id="materialAdvisor">
+        <div class="advisor-head"><div><span>INTERACTIVE MATERIAL NAVIGATOR</span><h3 data-zh="从使用条件出发，查看候选材料路径" data-en="Explore a Preliminary Material Path by Service Condition">从使用条件出发，查看候选材料路径</h3></div><p data-zh="选择一个典型环境，查看初步候选牌号与需要进一步确认的技术条件。结果仅用于询价准备。" data-en="Select a typical service condition to view candidate grades and the engineering information still required. Results are for RFQ preparation only.">选择一个典型环境，查看初步候选牌号与需要进一步确认的技术条件。结果仅用于询价准备。</p></div>
+        <div class="advisor-tabs" id="advisorTabs"><button class="active" data-advisor="advisor-general"><b>01</b><span data-zh="通用制造" data-en="General Fabrication">通用制造</span></button><button data-advisor="advisor-coastal"><b>02</b><span data-zh="氯化物与沿海" data-en="Chloride & Coastal">氯化物与沿海</span></button><button data-advisor="advisor-heat"><b>03</b><span data-zh="热循环部件" data-en="Thermal Cycling">热循环部件</span></button><button data-advisor="advisor-visual"><b>04</b><span data-zh="可视装饰面" data-en="Visible Surfaces">可视装饰面</span></button></div>
+        <div class="advisor-stage">
+          <article class="advisor-panel active" id="advisor-general"><div class="advisor-orbit"><i></i><i></i><strong>304<span>/ 304L</span></strong></div><div class="advisor-result"><span data-zh="初步候选" data-en="PRELIMINARY CANDIDATE">初步候选</span><h4 data-zh="均衡的通用型材料路径" data-en="A Balanced General-purpose Material Path">均衡的通用型材料路径</h4><p data-zh="适用于需要综合考虑耐腐蚀、成型、焊接和清洁性能的一般工业与食品、家电应用。" data-en="A common starting point where corrosion resistance, forming, welding and cleanability must be balanced for general industrial, food and appliance applications.">适用于需要综合考虑耐腐蚀、成型、焊接和清洁性能的一般工业与食品、家电应用。</p><dl><dt data-zh="下单前确认" data-en="CONFIRM BEFORE ORDER">下单前确认</dt><dd data-zh="介质、温度、焊接、表面、清洁方法" data-en="Media · Temperature · Welding · Finish · Cleaning method">介质、温度、焊接、表面、清洁方法</dd></dl></div></article>
+          <article class="advisor-panel" id="advisor-coastal"><div class="advisor-orbit"><i></i><i></i><strong>316<span>/ 316L</span></strong></div><div class="advisor-result"><span data-zh="初步候选" data-en="PRELIMINARY CANDIDATE">初步候选</span><h4 data-zh="面向更高耐点蚀需求" data-en="For Higher Pitting-resistance Requirements">面向更高耐点蚀需求</h4><p data-zh="含钼奥氏体牌号通常用于存在氯化物、潮湿、沿海或化工介质的项目，但仍需进行具体腐蚀评估。" data-en="Mo-bearing austenitic grades are commonly considered for chloride, humid, coastal or chemical exposure, subject to application-specific corrosion review.">含钼奥氏体牌号通常用于存在氯化物、潮湿、沿海或化工介质的项目，但仍需进行具体腐蚀评估。</p><dl><dt data-zh="下单前确认" data-en="CONFIRM BEFORE ORDER">下单前确认</dt><dd data-zh="氯化物浓度、温度、缝隙、清洁频率、暴露时间" data-en="Chloride level · Temperature · Crevices · Cleaning · Exposure time">氯化物浓度、温度、缝隙、清洁频率、暴露时间</dd></dl></div></article>
+          <article class="advisor-panel" id="advisor-heat"><div class="advisor-orbit"><i></i><i></i><strong>409L</strong></div><div class="advisor-result"><span data-zh="初步候选" data-en="PRELIMINARY CANDIDATE">初步候选</span><h4 data-zh="面向焊接与热循环结构" data-en="For Welded Thermal-cycle Components">面向焊接与热循环结构</h4><p data-zh="钛稳定化铁素体材料可作为汽车排气和耐热结构件的候选方向，需结合温度循环、冷凝与焊接条件确认。" data-en="A titanium-stabilized ferritic route for automotive exhaust and heat-resistant structures, subject to thermal cycle, condensate and welding conditions.">钛稳定化铁素体材料可作为汽车排气和耐热结构件的候选方向，需结合温度循环、冷凝与焊接条件确认。</p><dl><dt data-zh="下单前确认" data-en="CONFIRM BEFORE ORDER">下单前确认</dt><dd data-zh="峰值温度、循环次数、冷凝物、成型方向、焊接工艺" data-en="Peak temperature · Cycles · Condensate · Forming direction · Welding">峰值温度、循环次数、冷凝物、成型方向、焊接工艺</dd></dl></div></article>
+          <article class="advisor-panel" id="advisor-visual"><div class="advisor-orbit"><i></i><i></i><strong>430<span>/ 304</span></strong></div><div class="advisor-result"><span data-zh="初步候选" data-en="PRELIMINARY CANDIDATE">初步候选</span><h4 data-zh="面向室内外观与成本平衡" data-en="For Appearance and Cost Balance Indoors">面向室内外观与成本平衡</h4><p data-zh="430或304可作为家电面板、厨具和室内装饰的候选，最终选择取决于环境、成型、焊接与表面一致性。" data-en="430 or 304 may be considered for appliance panels, kitchenware and interior décor, depending on environment, forming, welding and surface consistency.">430或304可作为家电面板、厨具和室内装饰的候选，最终选择取决于环境、成型、焊接与表面一致性。</p><dl><dt data-zh="下单前确认" data-en="CONFIRM BEFORE ORDER">下单前确认</dt><dd data-zh="限度样板、纹路方向、色差、保护膜、包装和搬运" data-en="Limit sample · Grain direction · Shade · Film · Packing · Handling">限度样板、纹路方向、色差、保护膜、包装和搬运</dd></dl></div></article>
+        </div>
+      </div>
     </section>
 
     <section class="processing" id="processing">
@@ -229,7 +244,23 @@
 
     <section class="contact" id="contact">
       <div class="contact-copy reveal"><p class="eyebrow" data-zh="联系我们" data-en="CONTACT US">联系我们</p><h2 data-zh="让我们为下一批材料<br>做好准备" data-en="Let's Prepare Your<br>Next Material Order">让我们为下一批材料<br>做好准备</h2><p data-zh="请提供牌号、厚度、宽度、长度、数量、表面和加工要求，我们将据此沟通方案。" data-en="Share grade, thickness, width, length, quantity, finish and processing requirements, and we will discuss the right solution.">请提供牌号、厚度、宽度、长度、数量、表面和加工要求，我们将据此沟通方案。</p><div class="addresses"><div><span data-zh="经营地址" data-en="Business Address">经营地址</span><b data-zh="上海市普陀区红柳路555弄68号B1-13" data-en="B1-13, No. 68, Lane 555, Hongliu Road, Putuo District, Shanghai">上海市普陀区红柳路555弄68号B1-13</b></div><div><span data-zh="注册地址" data-en="Registered Address">注册地址</span><b data-zh="上海市嘉定区南翔镇蕰北公路1755弄3号A3231室" data-en="Room A3231, No. 3, Lane 1755, Yunbei Road, Nanxiang, Jiading District, Shanghai">上海市嘉定区南翔镇蕰北公路1755弄3号A3231室</b></div></div></div>
-      <form id="contactForm" class="reveal"><div class="field-row"><label><span data-zh="姓名 / 公司" data-en="Name / Company">姓名 / 公司</span><input name="name" required></label><label><span data-zh="联系方式" data-en="Phone / Email">联系方式</span><input name="contact" required></label></div><label><span data-zh="材料需求" data-en="Material Requirements">材料需求</span><textarea name="message" required placeholder="304 / 1.0mm / 1000mm / 2B ..."></textarea></label><button class="btn primary"><span data-zh="提交询价" data-en="Send Inquiry">提交询价</span><b>↗</b></button><p id="formNote"></p></form>
+      <form id="contactForm" class="reveal" name="contact" method="POST" action="/" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="subject" data-remove-prefix value="New international RFQ from Taijia Metal website">
+        <p class="bot-field" aria-hidden="true"><label>Leave this field empty<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="field-row">
+          <label><span data-zh="姓名 / 公司 *" data-en="Name / Company *">姓名 / 公司 *</span><input name="name" autocomplete="name" required></label>
+          <label><span data-zh="商务邮箱 *" data-en="Business Email *">商务邮箱 *</span><input type="email" name="email" autocomplete="email" required></label>
+        </div>
+        <div class="field-row">
+          <label><span data-zh="国家 / 地区" data-en="Country / Region">国家 / 地区</span><input name="country" autocomplete="country-name"></label>
+          <label><span data-zh="电话 / WhatsApp" data-en="Phone / WhatsApp">电话 / WhatsApp</span><input type="tel" name="phone" autocomplete="tel"></label>
+        </div>
+        <label><span data-zh="材料需求 *" data-en="Material Requirements *">材料需求 *</span><textarea name="message" required placeholder="304 / 1.0mm / 1000mm / 2B / 20 MT ..."></textarea></label>
+        <p class="form-privacy" data-zh="您的信息仅用于回复本次询盘。" data-en="Your information will only be used to respond to this inquiry.">您的信息仅用于回复本次询盘。</p>
+        <button class="btn primary" type="submit"><span data-zh="提交询价" data-en="Send Inquiry">提交询价</span><b>↗</b></button>
+        <p id="formNote" class="form-status" role="status" aria-live="polite"></p>
+      </form>
     </section>
   </main>
 
