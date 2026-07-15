@@ -19,6 +19,7 @@ function applyLanguage(nextLang){
   langBtn.textContent=lang==='zh'?'EN':'中';
   document.title=lang==='zh'?'泰嘉金属｜专业不锈钢材料与加工服务':'Taijia Metal | Stainless Steel Materials & Processing';
   updateRailLabels();
+  document.dispatchEvent(new CustomEvent('languagechange',{detail:{lang}}));
 }
 
 applyLanguage('en');
@@ -39,7 +40,7 @@ if(reducedMotion){
 menu.addEventListener('click',()=>navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
 
-const staggerGroups=['.value-grid','.portfolio-grid','.finish-grid','.process-list','.application-grid','.solution-grid','.quality-steps','.cert-gallery','.service-flow','.export-grid','.rfq-items','.faq-grid'];
+const staggerGroups=['.value-grid','.portfolio-grid','.finish-grid','.process-list','.application-grid','.solution-grid','.quality-steps','.cert-gallery','.service-flow','.export-grid','.rfq-items','.faq-grid','.format-tabs','.spec-builder-grid'];
 staggerGroups.forEach(selector=>{
   document.querySelectorAll(selector).forEach(group=>{
     if(!group.matches('.reveal')&&!group.closest('.reveal'))group.classList.add('reveal');
@@ -64,6 +65,117 @@ document.querySelectorAll('#productTabs button').forEach(button=>button.addEvent
   button.classList.add('active');
   document.getElementById(button.dataset.product).classList.add('active');
 }));
+
+const formatButtons=[...document.querySelectorAll('#formatTabs button')];
+const formatPanels=[...document.querySelectorAll('.format-panel')];
+formatButtons.forEach(button=>button.addEventListener('click',()=>{
+  formatButtons.forEach(item=>{
+    const active=item===button;
+    item.classList.toggle('active',active);
+    item.setAttribute('aria-selected',String(active));
+  });
+  formatPanels.forEach(panel=>{
+    const active=panel.id===button.dataset.format;
+    panel.classList.toggle('active',active);
+    panel.hidden=!active;
+  });
+}));
+
+const finishButtons=[...document.querySelectorAll('#finishTabs button')];
+const finishPanels=[...document.querySelectorAll('.finish-panel')];
+const finishVisual=document.getElementById('finishVisual');
+const finishMark=document.getElementById('finishMark');
+const finishVisualClasses={finishNo1:'finish-no1',finish2B:'finish-2b',finishBA:'finish-ba',finishNo4:'finish-no4',finishHL:'finish-hl',finishMirror:'finish-mirror'};
+finishButtons.forEach(button=>button.addEventListener('click',()=>{
+  finishButtons.forEach(item=>item.classList.toggle('active',item===button));
+  finishPanels.forEach(panel=>{
+    const active=panel.id===button.dataset.finish;
+    panel.classList.toggle('active',active);
+    panel.hidden=!active;
+  });
+  if(finishVisual){
+    Object.values(finishVisualClasses).forEach(className=>finishVisual.classList.remove(className));
+    finishVisual.classList.add(finishVisualClasses[button.dataset.finish]);
+  }
+  if(finishMark)finishMark.textContent=button.textContent.trim();
+}));
+
+const rfqBuilder=document.getElementById('rfqBuilder');
+const rfqGroups=[...document.querySelectorAll('.spec-option-group')];
+const rfqSummaryText=document.getElementById('rfqSummaryText');
+
+function getRfqSummary(){
+  return rfqGroups.map(group=>{
+    const selected=group.querySelector('button.active');
+    return `${group.dataset.groupEn}: ${selected?.dataset.valueEn||'—'}`;
+  }).join('  /  ');
+}
+
+function getRfqTemplate(){
+  return `TAIJIA METAL — REQUEST FOR QUOTATION\n${getRfqSummary()}\nOrder standard / edition: [ASTM/ASME or EN — specify]\nThickness / tolerance: \nWidth / length or coil data: \nQuantity: \nEdge / protective film: \nPacking: \nDestination port / required schedule: \nAdditional documentation or inspection requirements: `;
+}
+
+function updateRfqSummary(){
+  if(rfqSummaryText)rfqSummaryText.textContent=getRfqSummary();
+}
+
+function showRfqToast(message){
+  if(!rfqBuilder)return;
+  let toast=rfqBuilder.querySelector('.rfq-toast');
+  if(!toast){
+    toast=document.createElement('div');
+    toast.className='rfq-toast';
+    toast.setAttribute('role','status');
+    rfqBuilder.appendChild(toast);
+  }
+  toast.textContent=message;
+  toast.classList.add('show');
+  clearTimeout(showRfqToast.timer);
+  showRfqToast.timer=setTimeout(()=>toast.classList.remove('show'),2200);
+}
+
+async function copyRfqText(text){
+  if(navigator.clipboard&&window.isSecureContext){
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+  const helper=document.createElement('textarea');
+  helper.value=text;
+  helper.style.position='fixed';
+  helper.style.opacity='0';
+  document.body.appendChild(helper);
+  helper.select();
+  document.execCommand('copy');
+  helper.remove();
+}
+
+rfqGroups.forEach(group=>group.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{
+  group.querySelectorAll('button').forEach(item=>item.classList.toggle('active',item===button));
+  updateRfqSummary();
+})));
+
+document.getElementById('copyRfq')?.addEventListener('click',async()=>{
+  try{
+    await copyRfqText(getRfqTemplate());
+    document.querySelector('.spec-output')?.classList.add('is-copied');
+    setTimeout(()=>document.querySelector('.spec-output')?.classList.remove('is-copied'),600);
+    showRfqToast(lang==='zh'?'英文采购规格已复制':'English purchase specification copied');
+  }catch(error){
+    showRfqToast(lang==='zh'?'复制失败，请使用“带入询价表”':'Copy failed — please use “Use in Inquiry”');
+  }
+});
+
+document.getElementById('useRfq')?.addEventListener('click',()=>{
+  const messageField=document.querySelector('#contactForm textarea[name="message"]');
+  if(!messageField)return;
+  messageField.value=getRfqTemplate();
+  document.getElementById('contact')?.scrollIntoView({behavior:reducedMotion?'auto':'smooth'});
+  setTimeout(()=>messageField.focus({preventScroll:true}),reducedMotion?0:650);
+  showRfqToast(lang==='zh'?'规格已带入询价表，请补充尺寸与数量':'Specification added — complete dimensions and quantity');
+});
+
+document.addEventListener('languagechange',updateRfqSummary);
+updateRfqSummary();
 
 document.querySelectorAll('#advisorTabs button').forEach(button=>button.addEventListener('click',()=>{
   document.querySelectorAll('#advisorTabs button').forEach(el=>el.classList.remove('active'));
@@ -251,7 +363,7 @@ if(finePointer&&!reducedMotion){
     cursorGlow.style.setProperty('--mouse-y',`${event.clientY}px`);
   },{passive:true});
 
-  const tiltTargets=document.querySelectorAll('.portfolio-card,.value-grid article,.finish-grid article,.solution-grid article,.export-grid article,.cert-gallery figure');
+  const tiltTargets=document.querySelectorAll('.portfolio-card,.value-grid article,.finish-grid article,.solution-grid article,.export-grid article,.cert-gallery figure,.spec-option-group');
   tiltTargets.forEach(card=>{
     card.classList.add('tilt-card');
     card.addEventListener('pointermove',event=>{
@@ -287,6 +399,7 @@ if(finePointer&&!reducedMotion){
 const railItems=[
   ['about','About','关于泰嘉'],
   ['materials','Materials','材料产品'],
+  ['product-center','Product Center','产品中心'],
   ['technical','Technical','技术参考'],
   ['processing','Processing','加工能力'],
   ['applications','Applications','应用领域'],
