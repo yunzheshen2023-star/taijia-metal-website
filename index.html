@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="export.css">
   <link rel="stylesheet" href="technical.css">
   <link rel="stylesheet" href="motion.css">
+  <link rel="stylesheet" href="experience.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -88,10 +89,10 @@
     <section class="materials" id="materials">
       <div class="section material-head"><div><p class="eyebrow" data-zh="材料与产品" data-en="MATERIALS & PRODUCTS">材料与产品</p><h2 data-zh="覆盖采购、加工与终端应用的<br>不锈钢产品体系" data-en="A Stainless Steel Portfolio for<br>Sourcing, Processing and End Use">覆盖采购、加工与终端应用的<br>不锈钢产品体系</h2></div><p data-zh="从卷材、板材到精密分条和表面处理，我们根据客户用途匹配牌号、机械性能、表面状态和加工方式。" data-en="From coil and sheet to precision strip and surface finish, we align grade, mechanical properties, finish and process with your end use.">从卷材、板材到精密分条和表面处理，我们根据客户用途匹配牌号、机械性能、表面状态和加工方式。</p></div>
       <div class="portfolio-grid">
-        <article class="portfolio-card dark reveal"><span>01</span><div class="coil-graphic"></div><h3 data-zh="不锈钢卷材" data-en="Stainless Steel Coil">不锈钢卷材</h3><p>S.S. COIL · 2B / BA / NO.1</p></article>
-        <article class="portfolio-card light reveal"><span>02</span><div class="sheet-graphic"><i></i><i></i><i></i></div><h3 data-zh="不锈钢板材" data-en="Stainless Steel Sheet">不锈钢板材</h3><p>SHEET & PLATE · CUSTOM SIZE</p></article>
-        <article class="portfolio-card green reveal"><span>03</span><div class="strip-graphic"><i></i><i></i><i></i><i></i></div><h3 data-zh="精密分条" data-en="Precision Strip">精密分条</h3><p>SLIT COIL · CUSTOM WIDTH</p></article>
-        <article class="portfolio-card silver reveal"><span>04</span><div class="finish-graphic"></div><h3 data-zh="表面处理" data-en="Surface Finish">表面处理</h3><p>NO.4 / HL / MIRROR / FILM</p></article>
+        <article class="portfolio-card photo reveal"><img class="portfolio-photo" src="assets/industry/hero-coil.png" alt="Stainless steel coil processing line"><span>01</span><h3 data-zh="不锈钢卷材" data-en="Stainless Steel Coil">不锈钢卷材</h3><p>S.S. COIL · 2B / BA / NO.1</p></article>
+        <article class="portfolio-card photo reveal"><img class="portfolio-photo" src="assets/industry/quality-control.png" alt="Stainless steel sheet inspection" loading="lazy" decoding="async"><span>02</span><h3 data-zh="不锈钢板材" data-en="Stainless Steel Sheet">不锈钢板材</h3><p>SHEET & PLATE · CUSTOM SIZE</p></article>
+        <article class="portfolio-card photo reveal"><img class="portfolio-photo" src="assets/industry/slitting-line.png" alt="Precision stainless steel slitting line" loading="lazy" decoding="async"><span>03</span><h3 data-zh="精密分条" data-en="Precision Strip">精密分条</h3><p>SLIT COIL · CUSTOM WIDTH</p></article>
+        <article class="portfolio-card photo reveal"><img class="portfolio-photo" src="elevator-interior.webp" alt="Hairline stainless steel surface in elevator application" loading="lazy" decoding="async"><span>04</span><h3 data-zh="表面处理" data-en="Surface Finish">表面处理</h3><p>NO.4 / HL / MIRROR / FILM</p></article>
       </div>
       <div class="grade-center section">
         <div class="grade-nav reveal" id="productTabs"><button class="active" data-product="p304">304 / 304L / 304LN</button><button data-product="p316">316 / 316L</button><button data-product="p409">409L</button><button data-product="p430">430</button></div>
@@ -157,7 +158,36 @@
 
     <section class="applications section" id="applications">
       <div class="section-head reveal"><div><p class="eyebrow" data-zh="产品应用" data-en="PRODUCT APPLICATIONS">产品应用</p><h2 data-zh="跨行业材料支持" data-en="Materials Across Industries">跨行业材料支持</h2></div><p data-zh="不同环境对耐腐蚀、强度、成型、焊接和表面效果有不同要求。我们协助客户从使用场景出发选择材料。" data-en="Every environment has different requirements for corrosion resistance, strength, forming, welding and finish. We help customers select from the application backward.">不同环境对耐腐蚀、强度、成型、焊接和表面效果有不同要求。我们协助客户从使用场景出发选择材料。</p></div>
-      <div class="application-grid"><article><b>01</b><i>⌂</i><h3 data-zh="家电与厨具" data-en="Appliances & Kitchenware">家电与厨具</h3><p>304 · 430</p></article><article><b>02</b><i>✚</i><h3 data-zh="医疗与制药" data-en="Medical & Pharmaceutical">医疗与制药</h3><p>304L · 316L</p></article><article><b>03</b><i>◇</i><h3 data-zh="建筑与装饰" data-en="Architecture & Décor">建筑与装饰</h3><p>304 · 430</p></article><article><b>04</b><i>◎</i><h3 data-zh="汽车制造" data-en="Automotive">汽车制造</h3><p>409L · 430</p></article><article><b>05</b><i>⌁</i><h3 data-zh="食品设备" data-en="Food Equipment">食品设备</h3><p>304 · 316L</p></article><article><b>06</b><i>△</i><h3 data-zh="化工与沿海" data-en="Chemical & Coastal">化工与沿海</h3><p>316 · 316L</p></article></div>
+      <div class="industry-showcase reveal" id="industryShowcase">
+        <div class="industry-stage" id="industryStage" tabindex="0" aria-label="Interactive industry application gallery">
+          <article class="industry-slide active" data-scene="kitchen" aria-hidden="false">
+            <img src="commercial-kitchen.webp" alt="Professional stainless steel commercial kitchen equipment" loading="lazy" decoding="async">
+            <div class="industry-content"><span>APPLICATION / 01</span><h3 data-zh="商用厨房与食品设备" data-en="Commercial Kitchens & Food Equipment">商用厨房与食品设备</h3><p data-zh="面向清洁性、耐用性与重复加工需求，提供适用于水槽、操作台、厨具和食品设备的材料与表面路径。" data-en="Material and finish routes for sinks, preparation counters, cookware and food equipment where cleanability, durability and repeatable fabrication matter.">面向清洁性、耐用性与重复加工需求，提供适用于水槽、操作台、厨具和食品设备的材料与表面路径。</p><div class="industry-spec"><b>304 / 304L</b><b>2B / NO.4</b><b>SHEET & COIL</b></div><a class="industry-link" href="#contact"><span data-zh="沟通该应用" data-en="Discuss This Application">沟通该应用</span><i>↗</i></a></div>
+          </article>
+          <article class="industry-slide" data-scene="automotive" aria-hidden="true">
+            <img src="automotive-manufacturing.webp" alt="Chinese automotive technicians inspecting stainless steel exhaust components" loading="lazy" decoding="async">
+            <div class="industry-content"><span>APPLICATION / 02</span><h3 data-zh="汽车制造与排气系统" data-en="Automotive Manufacturing">汽车制造与排气系统</h3><p data-zh="为排气管路、焊接总成与热循环部件提供兼顾成型、焊接、耐热和批次稳定性的材料选择。" data-en="Material routes for exhaust systems, welded assemblies and thermal-cycle components where forming, welding, heat resistance and batch consistency must align.">为排气管路、焊接总成与热循环部件提供兼顾成型、焊接、耐热和批次稳定性的材料选择。</p><div class="industry-spec"><b>409L / 430</b><b>PRECISION STRIP</b><b>WELD CONTROL</b></div><a class="industry-link" href="#contact"><span data-zh="沟通该应用" data-en="Discuss This Application">沟通该应用</span><i>↗</i></a></div>
+          </article>
+          <article class="industry-slide" data-scene="industrial" aria-hidden="true">
+            <img src="industrial-equipment.webp" alt="Chinese technicians inspecting stainless steel industrial equipment" loading="lazy" decoding="async">
+            <div class="industry-content"><span>APPLICATION / 03</span><h3 data-zh="工业设备与工程制造" data-en="Industrial Equipment & Engineering">工业设备与工程制造</h3><p data-zh="面向换热设备、容器和工程结构，关注材质证明、尺寸公差、焊接区域、表面完整性与订单追溯。" data-en="Sheet and plate support for heat exchangers, vessels and engineered structures, with attention to documentation, tolerances, weld zones, surface integrity and traceability.">面向换热设备、容器和工程结构，关注材质证明、尺寸公差、焊接区域、表面完整性与订单追溯。</p><div class="industry-spec"><b>304L / 316L</b><b>PLATE & SHEET</b><b>CUT-TO-LENGTH</b></div><a class="industry-link" href="#contact"><span data-zh="沟通该应用" data-en="Discuss This Application">沟通该应用</span><i>↗</i></a></div>
+          </article>
+          <article class="industry-slide" data-scene="elevator" aria-hidden="true">
+            <img src="elevator-interior.webp" alt="Premium hairline stainless steel elevator interior" loading="lazy" decoding="async">
+            <div class="industry-content"><span>APPLICATION / 04</span><h3 data-zh="电梯与建筑装饰" data-en="Elevator & Architectural Décor">电梯与建筑装饰</h3><p data-zh="针对轿厢、门板和可视装饰面，协同确认纹路方向、色差限度、反射效果、保护膜与运输保护。" data-en="For elevator cars, doors and visible panels, we coordinate grain direction, shade limits, reflectivity, protective film and handling protection.">针对轿厢、门板和可视装饰面，协同确认纹路方向、色差限度、反射效果、保护膜与运输保护。</p><div class="industry-spec"><b>304 / 430</b><b>HL / NO.4 / MIRROR</b><b>PROTECTIVE FILM</b></div><a class="industry-link" href="#contact"><span data-zh="沟通该应用" data-en="Discuss This Application">沟通该应用</span><i>↗</i></a></div>
+          </article>
+          <button class="industry-arrow prev" type="button" aria-label="Previous application">←</button><button class="industry-arrow next" type="button" aria-label="Next application">→</button>
+          <div class="industry-count"><b id="industryCurrent">01</b><i><span id="industryProgress"></span></i><em>04</em></div>
+          <div class="industry-touch"><i></i><span data-zh="拖动或滑动浏览" data-en="DRAG OR SWIPE TO EXPLORE">拖动或滑动浏览</span></div>
+        </div>
+        <div class="industry-tabs" id="industryTabs" role="tablist" aria-label="Industry applications">
+          <button class="active" type="button" data-industry-index="0" role="tab" aria-selected="true"><img src="commercial-kitchen.webp" alt=""><span><b>01</b><strong data-zh="厨房与食品" data-en="Kitchen & Food">厨房与食品</strong><small>304 / 304L</small></span></button>
+          <button type="button" data-industry-index="1" role="tab" aria-selected="false"><img src="automotive-manufacturing.webp" alt=""><span><b>02</b><strong data-zh="汽车制造" data-en="Automotive">汽车制造</strong><small>409L / 430</small></span></button>
+          <button type="button" data-industry-index="2" role="tab" aria-selected="false"><img src="industrial-equipment.webp" alt=""><span><b>03</b><strong data-zh="工业设备" data-en="Industrial">工业设备</strong><small>304L / 316L</small></span></button>
+          <button type="button" data-industry-index="3" role="tab" aria-selected="false"><img src="elevator-interior.webp" alt=""><span><b>04</b><strong data-zh="电梯装饰" data-en="Elevator & Décor">电梯装饰</strong><small>HL / NO.4</small></span></button>
+        </div>
+      </div>
+      <div class="application-more reveal"><span data-zh="同时支持" data-en="ALSO SUPPLIED FOR">同时支持</span><b data-zh="医疗与制药" data-en="Medical & Pharmaceutical">医疗与制药</b><b data-zh="家用电器" data-en="Household Appliances">家用电器</b><b data-zh="基础设施" data-en="Infrastructure">基础设施</b><b data-zh="化工与沿海" data-en="Chemical & Coastal">化工与沿海</b></div>
     </section>
 
     <section class="solutions section" id="solutions">
