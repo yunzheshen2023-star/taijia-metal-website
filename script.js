@@ -40,7 +40,7 @@ if(reducedMotion){
 menu.addEventListener('click',()=>navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
 
-const staggerGroups=['.value-grid','.portfolio-grid','.finish-grid','.process-list','.application-grid','.solution-grid','.quality-steps','.cert-gallery','.service-flow','.export-grid','.rfq-items','.faq-grid','.format-tabs','.spec-builder-grid'];
+const staggerGroups=['.value-grid','.portfolio-grid','.finish-grid','.process-list','.application-grid','.solution-grid','.quality-steps','.cert-gallery','.service-flow','.export-grid','.rfq-items','.faq-grid','.format-tabs','.spec-builder-grid','.factory-proof','.factory-gallery'];
 staggerGroups.forEach(selector=>{
   document.querySelectorAll(selector).forEach(group=>{
     if(!group.matches('.reveal')&&!group.closest('.reveal'))group.classList.add('reveal');
@@ -402,6 +402,7 @@ const railItems=[
   ['product-center','Product Center','产品中心'],
   ['technical','Technical','技术参考'],
   ['processing','Processing','加工能力'],
+  ['factory','Factory','真实工厂'],
   ['applications','Applications','应用领域'],
   ['quality','Quality','质量体系'],
   ['export','Export','出口支持'],
