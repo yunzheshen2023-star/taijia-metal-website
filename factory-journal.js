@@ -45,7 +45,7 @@
     titleZh: entry[2],
     copyEn: entry[3],
     copyZh: entry[4],
-    source: `assets/factory-selected/site-${String(index + 1).padStart(2, '0')}.jpg`
+    source: `factory-site-${String(index + 1).padStart(2, '0')}.jpg`
   }));
 
   const grid = journal.querySelector('#factoryJournalGrid, .journal-grid');
