@@ -24,6 +24,7 @@
 <link rel="stylesheet" href="light-theme.css">
 <link rel="stylesheet" href="factory.css">
 <link rel="stylesheet" href="steel-refresh.css">
+<link rel="stylesheet" href="interactive-buyer.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -79,12 +80,54 @@
       </div>
       <div class="hero-metrics reveal"><div><b>300 / 400</b><span data-zh="不锈钢系列" data-en="Steel Series">不锈钢系列</span></div><div><b>4</b><span data-zh="核心加工服务" data-en="Core Processes">核心加工服务</span></div><div><b>ASTM / EN</b><span data-zh="订单标准支持" data-en="Specification Support">订单标准支持</span></div><div><b>ISO 9001</b><span data-zh="质量管理体系" data-en="Quality System">质量管理体系</span></div></div>
       <div class="visual-note" data-zh="行业加工场景示意" data-en="Industry process illustration">行业加工场景示意</div>
-      <a class="scroll-cue" href="#about"><span data-zh="向下探索" data-en="SCROLL TO EXPLORE">向下探索</span><i></i></a>
+<a class="scroll-cue" href="#buyer-route"><span data-zh="开始选材" data-en="START YOUR PROJECT">START YOUR PROJECT</span><i></i></a>
     </section>
 
     <section class="partner-bar"><span data-zh="稳定连接优质钢厂资源" data-en="CONNECTED TO LEADING MILL RESOURCES">稳定连接优质钢厂资源</span><div class="partner-track"><div class="partner-group"><b>BAOSTEEL</b><b>NINGBO BAOXIN</b><b>ZHANGJIAGANG POSCO</b><b>TAIYUAN IRON & STEEL</b><b>KUNSHAN DA GENG</b><b>POSCO</b><b>OUTOKUMPU</b></div><div class="partner-group" aria-hidden="true"><b>BAOSTEEL</b><b>NINGBO BAOXIN</b><b>ZHANGJIAGANG POSCO</b><b>TAIYUAN IRON & STEEL</b><b>KUNSHAN DA GENG</b><b>POSCO</b><b>OUTOKUMPU</b></div></div></section>
 
-    <section class="section about" id="about">
+<section class="buyer-route section" id="buyer-route">
+  <div class="buyer-route-head reveal">
+    <div>
+      <p class="eyebrow" data-en="BUYER PROJECT NAVIGATOR" data-zh="采购项目导航">BUYER PROJECT NAVIGATOR</p>
+      <h2 data-en="Start with your application.<br>Leave with a practical sourcing route." data-zh="从应用场景出发，<br>快速形成可执行采购路径。">Start with your application.<br>Leave with a practical sourcing route.</h2>
+    </div>
+    <p data-en="Choose an end use to preview candidate grades, product forms, finishes, processing and order documents before you send an inquiry." data-zh="选择终端应用，在询价前快速预览候选牌号、产品形态、表面、加工与订单文件。">Choose an end use to preview candidate grades, product forms, finishes, processing and order documents before you send an inquiry.</p>
+  </div>
+
+  <div class="route-shell reveal">
+    <aside class="route-choices" aria-label="Select an application">
+      <button class="route-choice is-active" type="button" data-route="kitchen"><span>01</span><strong data-en="Kitchen & Food Equipment" data-zh="厨具与食品设备">Kitchen &amp; Food Equipment</strong><small data-en="Hygiene · forming · finish" data-zh="卫生 · 成形 · 表面">Hygiene · forming · finish</small></button>
+      <button class="route-choice" type="button" data-route="automotive"><span>02</span><strong data-en="Automotive Components" data-zh="汽车零部件">Automotive Components</strong><small data-en="Heat · forming · consistency" data-zh="耐热 · 成形 · 一致性">Heat · forming · consistency</small></button>
+      <button class="route-choice" type="button" data-route="industrial"><span>03</span><strong data-en="Industrial & Coastal" data-zh="工业与沿海环境">Industrial &amp; Coastal</strong><small data-en="Corrosion · fabrication · traceability" data-zh="耐蚀 · 加工 · 追溯">Corrosion · fabrication · traceability</small></button>
+      <button class="route-choice" type="button" data-route="elevator"><span>04</span><strong data-en="Elevator & Architecture" data-zh="电梯与建筑装饰">Elevator &amp; Architecture</strong><small data-en="Appearance · flatness · protection" data-zh="外观 · 平整 · 保护">Appearance · flatness · protection</small></button>
+    </aside>
+
+    <article class="route-result" aria-live="polite">
+      <div class="route-result-top"><span id="routeTag">KITCHEN &amp; FOOD EQUIPMENT</span><b data-en="PRELIMINARY ROUTE" data-zh="初步建议">PRELIMINARY ROUTE</b></div>
+      <h3 id="routeTitle">A clean, formable stainless route for visible and food-contact components.</h3>
+      <p id="routeBody">Start with the end-use environment, forming depth, cleaning regime and required appearance.</p>
+      <dl class="route-specs">
+        <div><dt data-en="Candidate grades" data-zh="候选牌号">Candidate grades</dt><dd id="routeGrade">304 / 304L / 430</dd></div>
+        <div><dt data-en="Product forms" data-zh="产品形态">Product forms</dt><dd id="routeForm">Coil · sheet · strip</dd></div>
+        <div><dt data-en="Typical finishes" data-zh="常见表面">Typical finishes</dt><dd id="routeFinish">2B · BA/2R · No.4 · HL</dd></div>
+        <div><dt data-en="Processing route" data-zh="加工路径">Processing route</dt><dd id="routeProcess">Slitting · cut-to-length · protective film</dd></div>
+        <div class="route-docs"><dt data-en="Order documents" data-zh="订单文件">Order documents</dt><dd id="routeDocs">MTC / EN 10204 3.1 · packing details</dd></div>
+      </dl>
+      <p class="route-note" id="routeNote">Preliminary guidance only. Final grade and specification must be confirmed against the governing standard, drawing, fabrication route and service environment.</p>
+      <div class="route-actions"><button class="route-primary" id="routeRfqBtn" type="button" data-en="Build this RFQ" data-zh="生成此询价">Build this RFQ</button><button class="route-secondary" id="routeMaterialBtn" type="button" data-en="Explore materials" data-zh="查看材料">Explore materials</button></div>
+    </article>
+  </div>
+
+  <nav class="route-journey reveal" aria-label="Buyer journey">
+    <a href="#materials"><span>01</span><strong data-en="Select material" data-zh="选择材料">Select material</strong></a>
+    <a href="#processing"><span>02</span><strong data-en="Define processing" data-zh="确定加工">Define processing</strong></a>
+    <a href="#quality"><span>03</span><strong data-en="Verify quality" data-zh="验证质量">Verify quality</strong></a>
+    <a href="#factory-journal"><span>04</span><strong data-en="See real facilities" data-zh="查看实拍工厂">See real facilities</strong></a>
+    <a href="#contact"><span>05</span><strong data-en="Send inquiry" data-zh="提交询价">Send inquiry</strong></a>
+  </nav>
+</section>
+
+<section class="section about" id="about">
       <div class="section-code">01 / ABOUT</div>
       <div class="about-main reveal">
         <p class="eyebrow" data-zh="关于泰嘉" data-en="ABOUT TAIJIA">关于泰嘉</p>
@@ -561,5 +604,6 @@
 <script src="script.js"></script>
 <script src="factory.js"></script>
 <script src="factory-journal.js"></script>
+<script src="interactive-buyer.js"></script>
 </body>
 </html>
