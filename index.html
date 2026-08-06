@@ -23,6 +23,7 @@
 <link rel="stylesheet" href="product-center.css">
 <link rel="stylesheet" href="light-theme.css">
 <link rel="stylesheet" href="factory.css">
+<link rel="stylesheet" href="steel-refresh.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -302,6 +303,118 @@
       </div>
     </section>
 
+    <section class="factory-journal section" id="factory-journal">
+      <div class="journal-intro reveal">
+        <div class="journal-copy">
+          <p class="eyebrow" data-en="ADDITIONAL FACTORY PHOTO JOURNAL" data-zh="新增工厂实拍图集">ADDITIONAL FACTORY PHOTO JOURNAL</p>
+          <h2 data-en="Production visibility, beyond a single visit." data-zh="不止一次参观，更全面看见生产现场。">Production visibility, beyond a single visit.</h2>
+          <p data-en="A second production facility is now included in our manufacturing showcase. These on-site images document material storage, coil handling, processing equipment and day-to-day production flow." data-zh="我们将第二生产基地纳入制造展示。这些现场实拍记录了材料仓储、卷材吊运、加工设备与日常生产流程。">A second production facility is now included in our manufacturing showcase. These on-site images document material storage, coil handling, processing equipment and day-to-day production flow.</p>
+        </div>
+        <aside class="journal-standard" aria-label="Visual standard">
+          <span>VISUAL STANDARD</span>
+          <strong data-en="Real equipment. Real material. Real workflow." data-zh="真实设备 · 真实材料 · 真实流程">Real equipment. Real material. Real workflow.</strong>
+        </aside>
+      </div>
+
+      <div class="journal-stage reveal" aria-label="Manufacturing process explorer">
+        <div class="journal-stage-image">
+          <img id="journalStageImage" src="assets/factory-journal/production-line.jpg" alt="Stainless steel coil processing line in the factory">
+          <span id="journalStageIndex">01 / 03</span>
+        </div>
+        <div class="journal-stage-content">
+          <p class="eyebrow" data-en="EXPLORE THE FLOOR" data-zh="探索生产现场">EXPLORE THE FLOOR</p>
+          <h3 id="journalStageTitle">Coil-to-sheet processing</h3>
+          <p id="journalStageCopy">Material flow is supported by dedicated processing equipment, controlled handling routes and protected work areas.</p>
+          <div class="journal-stage-tabs" role="tablist" aria-label="Manufacturing stages">
+            <button class="journal-stage-tab is-active" type="button" role="tab" aria-selected="true" data-image="assets/factory-journal/production-line.jpg" data-index="01 / 03" data-title-en="Coil-to-sheet processing" data-title-zh="卷材至板材加工" data-copy-en="Material flow is supported by dedicated processing equipment, controlled handling routes and protected work areas." data-copy-zh="材料流转由专业加工设备、受控搬运路线与防护作业区域协同保障。">01 <span data-en="PROCESS" data-zh="加工">PROCESS</span></button>
+            <button class="journal-stage-tab" type="button" role="tab" aria-selected="false" data-image="assets/factory-journal/coil-inventory.jpg" data-index="02 / 03" data-title-en="Organised coil inventory" data-title-zh="有序卷材库存" data-copy-en="Coils are staged for identification, handling and downstream processing, making material status easier to verify before release." data-copy-zh="卷材按标识、搬运与后续加工需求进行存放，便于在放行前核对材料状态。">02 <span data-en="MATERIAL" data-zh="材料">MATERIAL</span></button>
+            <button class="journal-stage-tab" type="button" role="tab" aria-selected="false" data-image="assets/factory-journal/protected-operation.jpg" data-index="03 / 03" data-title-en="Controlled handling" data-title-zh="受控吊运作业" data-copy-en="On-site handling images demonstrate the scale of the facility and the practical coordination required for coils, plates and processing equipment." data-copy-zh="现场吊运画面展现了工厂规模，以及卷材、板材与加工设备之间所需的协同作业。">03 <span data-en="HANDLING" data-zh="吊运">HANDLING</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="journal-gallery-head reveal">
+        <div>
+          <p class="eyebrow" data-en="CLICK TO INSPECT" data-zh="点击查看细节">CLICK TO INSPECT</p>
+          <h3 data-en="Factory photo journal" data-zh="工厂实拍图集">Factory photo journal</h3>
+        </div>
+        <div class="journal-filters" role="group" aria-label="Filter factory photos">
+          <button class="journal-filter is-active" type="button" aria-pressed="true" data-filter="all" data-en="All" data-zh="全部">All</button>
+          <button class="journal-filter" type="button" aria-pressed="false" data-filter="material" data-en="Material" data-zh="材料">Material</button>
+          <button class="journal-filter" type="button" aria-pressed="false" data-filter="process" data-en="Processing" data-zh="加工">Processing</button>
+          <button class="journal-filter" type="button" aria-pressed="false" data-filter="facility" data-en="Facility" data-zh="厂区">Facility</button>
+        </div>
+      </div>
+
+      <div class="journal-grid reveal" id="factoryJournalGrid">
+        <button class="journal-card journal-card--wide" type="button" data-journal-category="facility" data-source="assets/factory-journal/factory-overview.jpg" data-title-en="Additional factory floor" data-title-zh="新增工厂生产现场" data-copy-en="A wide view of the selected second production facility, including material zones and processing equipment." data-copy-zh="第二生产基地的广角实拍，呈现材料区域与加工设备布局。">
+          <img src="assets/factory-journal/factory-overview.jpg" alt="Wide view of stainless steel factory floor" loading="lazy">
+          <span class="journal-card-info"><small>01 / FACILITY</small><strong data-en="Additional factory floor" data-zh="新增工厂生产现场">Additional factory floor</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
+        </button>
+        <button class="journal-card" type="button" data-journal-category="material" data-source="assets/factory-journal/coil-inventory.jpg" data-title-en="Stainless coil inventory" data-title-zh="不锈钢卷材库存" data-copy-en="Coils staged for material identification, handling and production scheduling." data-copy-zh="卷材按材料识别、搬运与生产排程进行存放。">
+          <img src="assets/factory-journal/coil-inventory.jpg" alt="Stainless steel coils stored in the factory" loading="lazy">
+          <span class="journal-card-info"><small>02 / MATERIAL</small><strong data-en="Stainless coil inventory" data-zh="不锈钢卷材库存">Stainless coil inventory</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
+        </button>
+        <button class="journal-card" type="button" data-journal-category="process" data-source="assets/factory-journal/production-line.jpg" data-title-en="Production line" data-title-zh="加工生产线" data-copy-en="Dedicated equipment supports continuous coil and sheet processing operations." data-copy-zh="专业设备支持卷材与板材的连续加工。">
+          <img src="assets/factory-journal/production-line.jpg" alt="Industrial stainless steel production line" loading="lazy">
+          <span class="journal-card-info"><small>03 / PROCESS</small><strong data-en="Production line" data-zh="加工生产线">Production line</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
+        </button>
+        <button class="journal-card" type="button" data-journal-category="material" data-source="assets/factory-journal/coil-layout.jpg" data-title-en="Coil storage layout" data-title-zh="卷材存储布局" data-copy-en="A visual record of coil availability across the production floor." data-copy-zh="直观展示生产现场卷材的储备与布局。">
+          <img src="assets/factory-journal/coil-layout.jpg" alt="Coils arranged inside a steel factory" loading="lazy">
+          <span class="journal-card-info"><small>04 / MATERIAL</small><strong data-en="Coil storage layout" data-zh="卷材存储布局">Coil storage layout</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
+        </button>
+        <button class="journal-card journal-card--tall" type="button" data-journal-category="process" data-source="assets/factory-journal/slitting-line.jpg" data-title-en="Slitting line" data-title-zh="分条生产线" data-copy-en="Equipment for processing coil material into customer-required widths." data-copy-zh="用于将卷材加工为客户所需宽度的生产设备。">
+          <img src="assets/factory-journal/slitting-line.jpg" alt="Stainless steel slitting line" loading="lazy">
+          <span class="journal-card-info"><small>05 / PROCESS</small><strong data-en="Slitting line" data-zh="分条生产线">Slitting line</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
+        </button>
+        <button class="journal-card" type="button" data-journal-category="material" data-source="assets/factory-journal/coil-aisle.jpg" data-title-en="Coil handling aisle" data-title-zh="卷材搬运通道" data-copy-en="Clear aisles support practical access to material and equipment." data-copy-zh="清晰通道为材料与设备的作业衔接提供支持。">
+          <img src="assets/factory-journal/coil-aisle.jpg" alt="Stainless steel coil handling aisle" loading="lazy">
+          <span class="journal-card-info"><small>06 / MATERIAL</small><strong data-en="Coil handling aisle" data-zh="卷材搬运通道">Coil handling aisle</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
+        </button>
+        <button class="journal-card" type="button" data-journal-category="material" data-source="assets/factory-journal/warehouse-plates.jpg" data-title-en="Plate warehouse" data-title-zh="板材仓储区域" data-copy-en="Sheet and plate stock staged for inspection, conversion and delivery preparation." data-copy-zh="板材库存为检验、加工与交付准备而有序摆放。">
+          <img src="assets/factory-journal/warehouse-plates.jpg" alt="Stainless steel plates in warehouse" loading="lazy">
+          <span class="journal-card-info"><small>07 / MATERIAL</small><strong data-en="Plate warehouse" data-zh="板材仓储区域">Plate warehouse</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
+        </button>
+        <button class="journal-card journal-card--wide" type="button" data-journal-category="facility" data-source="assets/factory-journal/factory-aisle.jpg" data-title-en="Material flow route" data-title-zh="材料流转通道" data-copy-en="A broad production aisle connecting storage, processing and handling areas." data-copy-zh="连接仓储、加工与吊运区域的宽阔生产通道。">
+          <img src="assets/factory-journal/factory-aisle.jpg" alt="Wide stainless steel factory aisle" loading="lazy">
+          <span class="journal-card-info"><small>08 / FACILITY</small><strong data-en="Material flow route" data-zh="材料流转通道">Material flow route</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
+        </button>
+        <button class="journal-card" type="button" data-journal-category="process" data-source="assets/factory-journal/protected-operation.jpg" data-title-en="Coil handling operation" data-title-zh="卷材吊运作业" data-copy-en="A selected on-site operation showing material movement near the processing line." data-copy-zh="精选现场作业画面，展示加工线附近的材料搬运过程。">
+          <img src="assets/factory-journal/protected-operation.jpg" alt="Worker handling stainless steel coil in factory" loading="lazy">
+          <span class="journal-card-info"><small>09 / HANDLING</small><strong data-en="Coil handling operation" data-zh="卷材吊运作业">Coil handling operation</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
+        </button>
+        <button class="journal-card" type="button" data-journal-category="process" data-source="assets/factory-journal/operations-console.jpg" data-title-en="Processing controls" data-title-zh="加工控制区域" data-copy-en="A closer view of controls and machinery used for production coordination." data-copy-zh="近距离呈现用于生产协同的控制系统与设备。">
+          <img src="assets/factory-journal/operations-console.jpg" alt="Industrial machine control station" loading="lazy">
+          <span class="journal-card-info"><small>10 / PROCESS</small><strong data-en="Processing controls" data-zh="加工控制区域">Processing controls</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
+        </button>
+        <button class="journal-card" type="button" data-journal-category="process" data-source="assets/factory-journal/workstation.jpg" data-title-en="Processing workstation" data-title-zh="加工工位" data-copy-en="Equipment and workstations positioned for daily material conversion work." data-copy-zh="为日常材料加工配置的设备与作业工位。">
+          <img src="assets/factory-journal/workstation.jpg" alt="Steel processing workstation" loading="lazy">
+          <span class="journal-card-info"><small>11 / PROCESS</small><strong data-en="Processing workstation" data-zh="加工工位">Processing workstation</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
+        </button>
+        <button class="journal-card" type="button" data-journal-category="facility" data-source="assets/factory-journal/coil-handling.jpg" data-title-en="Production environment" data-title-zh="生产环境实拍" data-copy-en="A real on-site view of coil processing equipment and factory scale." data-copy-zh="真实呈现卷材加工设备与工厂规模。">
+          <img src="assets/factory-journal/coil-handling.jpg" alt="Coil processing equipment in factory" loading="lazy">
+          <span class="journal-card-info"><small>12 / FACILITY</small><strong data-en="Production environment" data-zh="生产环境实拍">Production environment</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
+        </button>
+      </div>
+    </section>
+
+    <div class="journal-lightbox" id="factoryJournalLightbox" role="dialog" aria-modal="true" aria-label="Factory photo viewer" hidden>
+      <div class="journal-lightbox__backdrop" data-journal-close></div>
+      <div class="journal-lightbox__panel" role="document">
+        <button class="journal-lightbox__close" type="button" data-journal-close aria-label="Close photo viewer">×</button>
+        <button class="journal-lightbox__nav journal-lightbox__prev" type="button" data-journal-prev aria-label="Previous photo">←</button>
+        <figure>
+          <img id="journalLightboxImage" src="" alt="">
+          <figcaption>
+            <span id="journalLightboxCount">01 / 12</span>
+            <h3 id="journalLightboxTitle"></h3>
+            <p id="journalLightboxCopy"></p>
+          </figcaption>
+        </figure>
+        <button class="journal-lightbox__nav journal-lightbox__next" type="button" data-journal-next aria-label="Next photo">→</button>
+      </div>
+    </div>
+
     <section class="applications section" id="applications">
       <div class="section-head reveal"><div><p class="eyebrow" data-zh="产品应用" data-en="PRODUCT APPLICATIONS">产品应用</p><h2 data-zh="跨行业材料支持" data-en="Materials Across Industries">跨行业材料支持</h2></div><p data-zh="不同环境对耐腐蚀、强度、成型、焊接和表面效果有不同要求。我们协助客户从使用场景出发选择材料。" data-en="Every environment has different requirements for corrosion resistance, strength, forming, welding and finish. We help customers select from the application backward.">不同环境对耐腐蚀、强度、成型、焊接和表面效果有不同要求。我们协助客户从使用场景出发选择材料。</p></div>
       <div class="industry-showcase reveal" id="industryShowcase">
@@ -443,5 +556,6 @@
   <footer><div class="footer-brand"><div class="brand"><span class="logo"><i>G</i><b>+</b></span><span><strong data-zh="泰嘉金属" data-en="TAIJIA METAL">泰嘉金属</strong><small>SHANGHAI · CHINA</small></span></div><p data-zh="以专业材料与可靠服务，支持每一次制造。" data-en="Supporting every build with professional materials and reliable service.">以专业材料与可靠服务，支持每一次制造。</p></div><div class="footer-links"><a href="#materials" data-zh="材料产品" data-en="Materials">材料产品</a><a href="#technical" data-zh="技术参考" data-en="Technical">技术参考</a><a href="#processing" data-zh="加工能力" data-en="Processing">加工能力</a><a href="#quality" data-zh="质量体系" data-en="Quality">质量体系</a><a href="#export" data-zh="出口支持" data-en="Export Support">出口支持</a><a href="#faq" data-zh="采购问答" data-en="Buyer FAQ">采购问答</a><a href="#contact" data-zh="联系我们" data-en="Contact">联系我们</a></div><div class="footer-bottom">© 2026 SHANGHAI TAIJIA METAL MATERIAL CO., LTD.</div></footer>
 <script src="script.js"></script>
 <script src="factory.js"></script>
+<script src="factory-journal.js"></script>
 </body>
 </html>
