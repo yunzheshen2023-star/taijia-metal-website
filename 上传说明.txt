@@ -1,0 +1,30 @@
+泰嘉金属官网——“应用场景采购导航”独立更新包
+
+本更新包只更新以下区域：
+“Start with your application. Leave with a practical sourcing route.”
+即：真实应用场景图、四个可点击行业入口、精简技术路线及询价联动。
+
+上传方法：
+1. 解压 ZIP 文件。
+2. 打开解压后的文件夹，选中里面的全部 8 个文件。
+3. 将这些文件拖到 GitHub 仓库 main 分支的根目录。
+4. 如提示同名文件，保留本更新包中的新文件进行覆盖。
+5. 在页面底部填写更新说明，然后点击 Commit changes。
+6. Netlify 会在提交成功后自动重新部署网站。
+
+重要提示：
+- 不要把 ZIP 压缩包直接上传到 GitHub。
+- 不要把外层文件夹作为子目录上传；应上传文件夹里面的文件。
+- index.html 必须一并覆盖，因为该模块的网页结构写在 index.html 中。
+- 本包不包含旧版 35 张工厂照片，也不修改工厂实拍图片区。
+- 本包不包含镍基合金扩展素材，只针对本次指定的应用场景互动模块。
+
+本包文件：
+- index.html
+- interactive-buyer.css
+- interactive-buyer.js
+- commercial-kitchen.webp
+- automotive-manufacturing.webp
+- industrial-equipment.webp
+- elevator-interior.webp
+- 上传说明.txt

@@ -124,9 +124,19 @@
     }
   };
 
+  const routeVisuals = {
+    kitchen: { src: "commercial-kitchen.webp", en: "Commercial kitchen and food equipment", zh: "\u5546\u7528\u53a8\u623f\u4e0e\u98df\u54c1\u8bbe\u5907" },
+    automotive: { src: "automotive-manufacturing.webp", en: "Automotive component manufacturing", zh: "\u6c7d\u8f66\u96f6\u90e8\u4ef6\u5236\u9020" },
+    industrial: { src: "industrial-equipment.webp", en: "Industrial and coastal equipment", zh: "\u5de5\u4e1a\u4e0e\u6cbf\u6d77\u8bbe\u5907" },
+    elevator: { src: "elevator-interior.webp", en: "Elevator and architectural interiors", zh: "\u7535\u68af\u4e0e\u5efa\u7b51\u88c5\u9970" }
+  };
+
   const buttons = Array.from(document.querySelectorAll(".route-choice[data-route]"));
   const result = document.querySelector(".route-result");
   if (!buttons.length || !result) return;
+
+  const routeImage = document.getElementById("routeImage");
+  const routeVisualCaption = document.getElementById("routeVisualCaption");
 
   const fields = {
     tag: document.getElementById("routeTag"),
@@ -143,6 +153,7 @@
   const rfqButton = document.getElementById("routeRfqBtn");
   const materialButton = document.getElementById("routeMaterialBtn");
   let active = "kitchen";
+  let switchTimer;
 
   const language = () =>
     document.documentElement.lang.toLowerCase().startsWith("zh") ? "zh" : "en";
@@ -151,6 +162,12 @@
 
   function render() {
     const data = activeData();
+    const visual = routeVisuals[active];
+    if (routeImage && visual) {
+      routeImage.src = visual.src;
+      routeImage.alt = visual[language()];
+    }
+    if (routeVisualCaption && visual) routeVisualCaption.textContent = visual[language()];
     Object.keys(fields).forEach((key) => {
       if (!fields[key]) return;
       fields[key].textContent = key === "index" ? routes[active].index : data[key];
@@ -167,8 +184,15 @@
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      active = button.dataset.route;
-      render();
+      const next = button.dataset.route;
+      if (!next || next === active) return;
+      result.classList.add("is-switching");
+      window.clearTimeout(switchTimer);
+      switchTimer = window.setTimeout(() => {
+        active = next;
+        render();
+        window.requestAnimationFrame(() => result.classList.remove("is-switching"));
+      }, 140);
     });
   });
 
