@@ -1,0 +1,21 @@
+TAIJIA METAL WEBSITE UPDATE
+
+This package fixes the three application images in the Advanced Alloys section.
+
+GitHub upload steps:
+1. Extract this ZIP file on your computer.
+2. Open the extracted folder.
+3. Upload the CONTENTS of this folder to the root of the GitHub repository (main branch). Do not upload the ZIP file itself.
+4. Keep the assets/alloys folder structure unchanged.
+5. When GitHub asks, allow index.html and advanced-alloys.js to replace the existing files.
+6. Enter a commit message such as: Fix advanced alloy application images
+7. Click Commit changes and wait for Netlify to finish the automatic deployment.
+
+Files to upload:
+- index.html
+- advanced-alloys.js
+- assets/alloys/chemical-processing.webp
+- assets/alloys/high-temperature-service.webp
+- assets/alloys/marine-heat-exchange.webp
+
+All image files have been optimized for browser upload and website loading.

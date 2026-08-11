@@ -86,7 +86,7 @@
 
   const sceneData = {
     chemical: {
-      image: 'assets/alloys/nickel-chemical-process.png',
+      image: 'assets/alloys/chemical-processing.webp',
       form: {
         family: 'Nickel Alloy',
         product: 'Plate / Sheet',
@@ -94,14 +94,14 @@
         service: 'Chemical process equipment exposed to corrosive media'
       },
       en: {
-        alt: 'Representative nickel-alloy chemical processing application visualization',
+          alt: 'Nickel-alloy chemical processing equipment',
         kicker: 'CHEMICAL PROCESS',
         title: 'Corrosion-resistant equipment for aggressive media',
         text: 'Nickel-alloy plate is considered for heat exchangers, reactor shells and process piping where temperature and corrosive media interact. Final selection remains project-specific.',
         grades: ['Alloy 825', 'C-276', 'Alloy 625']
       },
       zh: {
-        alt: '镍基合金化工设备应用场景示意图',
+          alt: '镍基合金化工设备应用',
         kicker: '化工流程',
         title: '严苛介质中的耐蚀设备',
         text: '在温度与腐蚀介质共同作用的工况中，镍基合金板材可用于换热器、反应器壳体与工艺管道。最终选材仍须按项目工况确认。',
@@ -109,7 +109,7 @@
       }
     },
     thermal: {
-      image: 'assets/alloys/nickel-high-temperature.png',
+      image: 'assets/alloys/high-temperature-service.webp',
       form: {
         family: 'Nickel Alloy',
         product: 'Plate / Sheet',
@@ -117,14 +117,14 @@
         service: 'High-temperature, oxidation or thermal cycling service'
       },
       en: {
-        alt: 'Representative nickel-alloy high-temperature application visualization',
+          alt: 'Nickel-alloy high-temperature equipment',
         kicker: 'HIGH-TEMPERATURE SYSTEMS',
         title: 'Alloys for heat, oxidation and thermal cycling',
         text: 'Nickel alloys may be considered for furnace internals, radiant components and thermal-processing equipment where oxidation resistance and strength retention matter.',
         grades: ['Alloy 600', 'Alloy 601', '800H / 800HT']
       },
       zh: {
-        alt: '镍基合金高温设备应用场景示意图',
+          alt: '镍基合金高温设备应用',
         kicker: '高温系统',
         title: '面向高温、氧化与热循环的合金方案',
         text: '在重视抗氧化能力与高温强度保持的工况中，镍基合金可用于炉内构件、辐射部件与热处理设备。',
@@ -132,7 +132,7 @@
       }
     },
     marine: {
-      image: 'assets/alloys/nickel-marine-heat-exchange.png',
+      image: 'assets/alloys/marine-heat-exchange.webp',
       form: {
         family: 'Nickel Alloy',
         product: 'Plate / Sheet',
@@ -140,14 +140,14 @@
         service: 'Seawater, marine or heat-exchange service'
       },
       en: {
-        alt: 'Representative nickel-alloy marine heat-exchange application visualization',
+          alt: 'Nickel-alloy marine heat-exchange systems',
         kicker: 'MARINE & HEAT EXCHANGE',
         title: 'Material routes for seawater and heat exchange',
         text: 'For seawater, offshore and heat-exchange service, candidate nickel alloys are screened against chloride level, temperature, velocity, fouling and fabrication requirements.',
         grades: ['Monel 400', 'Alloy 625', 'Alloy 825']
       },
       zh: {
-        alt: '镍基合金海洋换热应用场景示意图',
+          alt: '镍基合金海洋换热系统应用',
         kicker: '海洋与换热',
         title: '面向海水与换热系统的材料路线',
         text: '面向海水、海工与换热工况，候选镍基合金需结合氯离子浓度、温度、流速、结垢与制造要求进行筛选。',
