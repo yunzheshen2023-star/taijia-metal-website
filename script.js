@@ -40,7 +40,7 @@ if(reducedMotion){
 menu.addEventListener('click',()=>navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
 
-const staggerGroups=['.value-grid','.portfolio-grid','.finish-grid','.process-list','.application-grid','.solution-grid','.quality-steps','.cert-gallery','.service-flow','.export-grid','.rfq-items','.faq-grid','.format-tabs','.spec-builder-grid','.factory-proof','.factory-gallery'];
+const staggerGroups=['.value-grid','.portfolio-grid','.finish-grid','.process-list','.application-grid','.solution-grid','.quality-steps','.cert-gallery','.service-flow','.export-grid','.rfq-items','.faq-grid','.format-tabs','.spec-builder-grid','.factory-proof','.factory-gallery','.alloy-family-grid','.alloy-reference-block'];
 staggerGroups.forEach(selector=>{
   document.querySelectorAll(selector).forEach(group=>{
     if(!group.matches('.reveal')&&!group.closest('.reveal'))group.classList.add('reveal');

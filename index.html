@@ -25,9 +25,10 @@
 <link rel="stylesheet" href="product-center.css">
 <link rel="stylesheet" href="light-theme.css">
 <link rel="stylesheet" href="factory.css">
-<link rel="stylesheet" href="steel-refresh.css">
+  <link rel="stylesheet" href="steel-refresh.css">
   <link rel="stylesheet" href="interactive-buyer.css">
   <link rel="stylesheet" href="experience-v3.css">
+  <link rel="stylesheet" href="advanced-alloys.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -60,6 +61,7 @@
     <nav id="navLinks">
       <a href="#about" data-zh="关于泰嘉" data-en="About">关于泰嘉</a>
       <a href="#materials" data-zh="材料产品" data-en="Materials">材料产品</a>
+      <a href="#advanced-alloys" data-zh="工程合金" data-en="Advanced Alloys">工程合金</a>
 <a href="#processing" data-zh="加工能力" data-en="Processing">加工能力</a>
 <a href="#factory" data-zh="真实工厂" data-en="Factory">真实工厂</a>
 <a href="#applications" data-zh="应用领域" data-en="Applications">应用领域</a>
@@ -275,6 +277,93 @@
       </div>
     </section>
 
+    <section class="advanced-alloys section" id="advanced-alloys">
+      <div class="container">
+        <div class="alloy-heading reveal">
+          <div>
+            <p class="eyebrow" data-en="ENGINEERED ALLOY SOURCING" data-zh="工程合金协同供应">ENGINEERED ALLOY SOURCING</p>
+            <h2 data-en="Material routes for demanding service." data-zh="面向严苛工况的材料路径。">Material routes for demanding service.</h2>
+          </div>
+          <p class="alloy-heading-note" data-en="Taijia coordinates mill sourcing, specification review, precision processing, export packing and documentation. Availability is confirmed against each RFQ." data-zh="泰嘉围绕钢厂资源、技术规范、精密加工、出口包装与文件进行协同；具体可供范围以每份询价确认结果为准。">Taijia coordinates mill sourcing, specification review, precision processing, export packing and documentation. Availability is confirmed against each RFQ.</p>
+        </div>
+
+        <div class="alloy-selector reveal">
+          <div class="alloy-selector-copy">
+            <p class="eyebrow" data-en="APPLICATION-LED MATERIAL ROUTING" data-zh="按工况选择材料路径">APPLICATION-LED MATERIAL ROUTING</p>
+            <h3 data-en="Start with the service environment." data-zh="从实际服役环境出发。">Start with the service environment.</h3>
+            <p data-en="Choose a scenario to review a preliminary alloy family and the data needed for technical confirmation." data-zh="选择典型工况，查看初步候选合金系列以及技术确认所需信息。">Choose a scenario to review a preliminary alloy family and the data needed for technical confirmation.</p>
+          </div>
+
+          <div class="alloy-scenario-tabs" role="tablist" aria-label="Material selection scenarios">
+            <button class="alloy-scenario-tab active" type="button" data-scenario="seawater" role="tab" aria-selected="true"><span>01</span><b data-en="Seawater &amp; Chlorides" data-zh="海水与氯化物">Seawater &amp; Chlorides</b><i>→</i></button>
+            <button class="alloy-scenario-tab" type="button" data-scenario="acid" role="tab" aria-selected="false"><span>02</span><b data-en="Chemical &amp; Acid" data-zh="化工与酸性介质">Chemical &amp; Acid</b><i>→</i></button>
+            <button class="alloy-scenario-tab" type="button" data-scenario="thermal" role="tab" aria-selected="false"><span>03</span><b data-en="High Temperature" data-zh="高温服役">High Temperature</b><i>→</i></button>
+            <button class="alloy-scenario-tab" type="button" data-scenario="precision" role="tab" aria-selected="false"><span>04</span><b data-en="Precision Systems" data-zh="精密系统">Precision Systems</b><i>→</i></button>
+          </div>
+
+          <div class="alloy-recommendation" id="alloyRecommendation" aria-live="polite">
+            <small id="alloyRecKicker">Chloride &amp; marine service</small>
+            <h3 id="alloyRecTitle">Corrosion resistance with structural efficiency</h3>
+            <p id="alloyRecText">A preliminary route for seawater systems, marine equipment and chloride-bearing environments. Final grade selection depends on temperature, chloride level, design code and fabrication route.</p>
+            <div class="alloy-grade-chips" id="alloyRecGrades"><span>2205</span><span>2507</span><span>254 SMO</span></div>
+            <button class="btn primary" type="button" id="alloyRfq"><span data-en="Start an engineering RFQ" data-zh="发起工程询价">Start an engineering RFQ</span><b>→</b></button>
+          </div>
+        </div>
+
+        <div class="alloy-scenes reveal" aria-labelledby="alloyScenesTitle">
+          <div class="alloy-scenes-head">
+            <div>
+              <p class="eyebrow" data-en="REPRESENTATIVE APPLICATIONS" data-zh="代表性应用场景">REPRESENTATIVE APPLICATIONS</p>
+              <h3 id="alloyScenesTitle" data-en="See where nickel alloys earn their place." data-zh="看见镍基合金真正发挥价值的场景。">See where nickel alloys earn their place.</h3>
+            </div>
+            <p data-en="Three representative AI-assisted visualizations connect alloy grades with operating environments. They illustrate application logic and do not depict Taijia facilities." data-zh="三组 AI 辅助的代表性场景，将合金牌号与服役环境直观关联；用于说明应用逻辑，并非泰嘉工厂实拍。">Three representative AI-assisted visualizations connect alloy grades with operating environments. They illustrate application logic and do not depict Taijia facilities.</p>
+          </div>
+          <div class="alloy-scene-tabs" role="tablist" aria-label="Nickel alloy application scenes">
+            <button class="alloy-scene-tab active" type="button" role="tab" aria-selected="true" data-alloy-scene="chemical"><span data-en="Chemical Process" data-zh="化工装备">Chemical Process</span></button>
+            <button class="alloy-scene-tab" type="button" role="tab" aria-selected="false" data-alloy-scene="thermal"><span data-en="High Temperature" data-zh="高温系统">High Temperature</span></button>
+            <button class="alloy-scene-tab" type="button" role="tab" aria-selected="false" data-alloy-scene="marine"><span data-en="Marine & Seawater" data-zh="海洋与海水">Marine &amp; Seawater</span></button>
+          </div>
+          <div class="alloy-scene-stage" id="alloySceneStage" aria-live="polite">
+            <figure class="alloy-scene-media">
+              <img id="alloySceneImage" src="assets/alloys/nickel-chemical-process.png" alt="Representative nickel-alloy chemical processing application visualization" loading="lazy" decoding="async">
+              <figcaption><span data-en="Representative AI-assisted application visualization" data-zh="AI 辅助应用场景示意图">Representative AI-assisted application visualization</span></figcaption>
+            </figure>
+            <article class="alloy-scene-copy">
+              <small class="alloy-scene-kicker" id="alloySceneKicker">CHEMICAL PROCESS</small>
+              <h4 id="alloySceneTitle">Corrosion-resistant equipment for aggressive media</h4>
+              <p id="alloySceneText">Nickel-alloy plate is considered for heat exchangers, reactor shells and process piping where temperature and corrosive media interact.</p>
+              <div class="alloy-scene-grades" id="alloySceneGrades"><span>Alloy 825</span><span>C-276</span></div>
+              <button class="alloy-scene-rfq" id="alloySceneRfq" type="button"><span data-en="Discuss this service" data-zh="按此工况询价">Discuss this service</span><b>→</b></button>
+            </article>
+          </div>
+        </div>
+
+        <div class="alloy-family-grid">
+          <article class="alloy-family-card reveal" data-family="duplex" role="button" tabindex="0"><span class="alloy-family-no">01</span><p class="eyebrow">DUPLEX</p><h3 data-en="Duplex Stainless" data-zh="双相不锈钢">Duplex Stainless</h3><strong class="alloy-grade-line">2205 · 2507</strong><p data-en="Preliminary routes for chloride-bearing, marine and structural process service." data-zh="适用于含氯、海洋及兼顾强度的工艺结构场景的初步材料路径。">Preliminary routes for chloride-bearing, marine and structural process service.</p></article>
+          <article class="alloy-family-card reveal" data-family="austenitic" role="button" tabindex="0"><span class="alloy-family-no">02</span><p class="eyebrow">SUPER AUSTENITIC</p><h3 data-en="Super Austenitic" data-zh="超级奥氏体">Super Austenitic</h3><strong class="alloy-grade-line">904L · 254 SMO</strong><p data-en="High-alloy austenitic routes for aggressive chemical and chloride environments." data-zh="面向严苛化工介质及高氯环境的高合金奥氏体材料路径。">High-alloy austenitic routes for aggressive chemical and chloride environments.</p></article>
+          <article class="alloy-family-card reveal" data-family="nickel" role="button" tabindex="0"><span class="alloy-family-no">03</span><p class="eyebrow">NICKEL ALLOYS</p><h3 data-en="Nickel Alloys" data-zh="镍基合金">Nickel Alloys</h3><strong class="alloy-grade-line">800 / 800H / 800HT · 825<br>600 / 601 / 625 · C-276</strong><p data-en="High-temperature and severe-corrosion routes requiring project-specific verification." data-zh="面向高温及严苛腐蚀环境，需结合项目工况专项确认。">High-temperature and severe-corrosion routes requiring project-specific verification.</p></article>
+          <article class="alloy-family-card reveal" data-family="precision" role="button" tabindex="0"><span class="alloy-family-no">04</span><p class="eyebrow">PRECISION ALLOY</p><h3 data-en="Precision Alloy" data-zh="精密合金">Precision Alloy</h3><strong class="alloy-grade-line">4J36</strong><p data-en="Low-expansion route for instruments and components requiring dimensional stability." data-zh="适用于重视尺寸稳定性的仪器与精密组件的低膨胀材料路径。">Low-expansion route for instruments and components requiring dimensional stability.</p></article>
+        </div>
+
+        <div class="alloy-reference-block">
+          <article class="alloy-standards alloy-reference-card reveal">
+            <p class="eyebrow" data-en="REFERENCE SPECIFICATIONS" data-zh="参考规范">REFERENCE SPECIFICATIONS</p>
+            <h3 data-en="Common procurement references" data-zh="常见采购规范参考">Common procurement references</h3>
+            <div class="alloy-standard-list"><span>ASTM A240 / ASME SA-240</span><span>ASTM B409 / ASME SB-409</span><span>ASTM B424 / ASME SB-424</span><span>ASTM B443 / ASME SB-443</span><span>ASTM B575 / ASME SB-575</span></div>
+            <p class="alloy-reference-note" data-en="Reference route only; the final standard edition and scope are verified against the RFQ and mill documents." data-zh="以上仅作采购路径参考；最终规范版本及适用范围须依据询价文件与钢厂资料确认。">Reference route only; the final standard edition and scope are verified against the RFQ and mill documents.</p>
+          </article>
+          <article class="alloy-applications alloy-reference-card light reveal">
+            <p class="eyebrow" data-en="TYPICAL APPLICATIONS" data-zh="典型应用">TYPICAL APPLICATIONS</p>
+            <h3 data-en="Where advanced alloys are considered" data-zh="工程合金的典型应用方向">Where advanced alloys are considered</h3>
+            <div class="alloy-application-list"><span data-en="Petrochemical" data-zh="石油化工">Petrochemical</span><span data-en="Heat exchangers" data-zh="换热设备">Heat exchangers</span><span data-en="FGD" data-zh="烟气脱硫">FGD</span><span data-en="Seawater systems" data-zh="海水系统">Seawater systems</span><span data-en="Polysilicon" data-zh="多晶硅">Polysilicon</span><span data-en="Marine equipment" data-zh="海洋装备">Marine equipment</span><span data-en="Precision instruments" data-zh="精密仪器">Precision instruments</span></div>
+            <p class="alloy-reference-note" data-en="Operating media, temperature, pressure and fabrication route govern final material selection." data-zh="最终材料选择取决于介质、温度、压力及制造工艺等实际工况。">Operating media, temperature, pressure and fabrication route govern final material selection.</p>
+          </article>
+        </div>
+
+        <p class="alloy-disclaimer" data-en="The selection routes above are preliminary engineering references only. Exact grade, standard edition, dimensions, delivery condition, testing and documentation must be confirmed by RFQ and mill documents." data-zh="以上选材路径仅作为初步工程参考。具体牌号、标准版本、尺寸、交货状态、检测与文件要求须通过询价及钢厂文件确认。">The selection routes above are preliminary engineering references only. Exact grade, standard edition, dimensions, delivery condition, testing and documentation must be confirmed by RFQ and mill documents.</p>
+      </div>
+    </section>
+
     <section class="processing" id="processing">
       <div class="process-hero"><img src="assets/industry/slitting-line.png" alt="不锈钢分条加工场景示意"><div class="process-overlay"><p class="eyebrow" data-zh="加工能力" data-en="PROCESSING CAPABILITIES">加工能力</p><h2 data-zh="让材料更接近<br>客户的生产需求" data-en="Material Prepared<br>for Your Production">让材料更接近<br>客户的生产需求</h2><p data-zh="根据订单的材质、宽度、长度、表面与包装要求，协调适配的加工流程。所有具体加工范围以订单技术确认书为准。" data-en="Processing is configured around grade, width, length, surface and packaging requirements. Final capability is subject to order-specific technical confirmation.">根据订单的材质、宽度、长度、表面与包装要求，协调适配的加工流程。所有具体加工范围以订单技术确认书为准。</p></div><small data-zh="行业加工场景示意" data-en="Industry process illustration">行业加工场景示意</small></div>
       <div class="process-list section">
@@ -364,7 +453,7 @@
 
       <div class="journal-stage reveal" aria-label="Manufacturing process explorer">
         <div class="journal-stage-image">
-          <img id="journalStageImage" src="assets/factory-journal/production-line.jpg" alt="Stainless steel coil processing line in the factory">
+          <img id="journalStageImage" src="factory-site-02.jpg" alt="Stainless steel coil processing line in the factory">
           <span id="journalStageIndex">01 / 03</span>
         </div>
         <div class="journal-stage-content">
@@ -372,9 +461,9 @@
           <h3 id="journalStageTitle">Coil-to-sheet processing</h3>
           <p id="journalStageCopy">Material flow is supported by dedicated processing equipment, controlled handling routes and protected work areas.</p>
           <div class="journal-stage-tabs" role="tablist" aria-label="Manufacturing stages">
-            <button class="journal-stage-tab is-active" type="button" role="tab" aria-selected="true" data-image="assets/factory-journal/production-line.jpg" data-index="01 / 03" data-title-en="Coil-to-sheet processing" data-title-zh="卷材至板材加工" data-copy-en="Material flow is supported by dedicated processing equipment, controlled handling routes and protected work areas." data-copy-zh="材料流转由专业加工设备、受控搬运路线与防护作业区域协同保障。">01 <span data-en="PROCESS" data-zh="加工">PROCESS</span></button>
-            <button class="journal-stage-tab" type="button" role="tab" aria-selected="false" data-image="assets/factory-journal/coil-inventory.jpg" data-index="02 / 03" data-title-en="Organised coil inventory" data-title-zh="有序卷材库存" data-copy-en="Coils are staged for identification, handling and downstream processing, making material status easier to verify before release." data-copy-zh="卷材按标识、搬运与后续加工需求进行存放，便于在放行前核对材料状态。">02 <span data-en="MATERIAL" data-zh="材料">MATERIAL</span></button>
-            <button class="journal-stage-tab" type="button" role="tab" aria-selected="false" data-image="assets/factory-journal/protected-operation.jpg" data-index="03 / 03" data-title-en="Controlled handling" data-title-zh="受控吊运作业" data-copy-en="On-site handling images demonstrate the scale of the facility and the practical coordination required for coils, plates and processing equipment." data-copy-zh="现场吊运画面展现了工厂规模，以及卷材、板材与加工设备之间所需的协同作业。">03 <span data-en="HANDLING" data-zh="吊运">HANDLING</span></button>
+                <button class="journal-stage-tab is-active" type="button" role="tab" aria-selected="true" data-image="factory-site-02.jpg" data-index="01 / 03" data-title-en="Coil-to-sheet processing" data-title-zh="卷材至板材加工" data-copy-en="Material flow is supported by dedicated processing equipment, controlled handling routes and protected work areas." data-copy-zh="材料流转由专业加工设备、受控搬运路线与防护作业区域协同保障。">01 <span data-en="PROCESS" data-zh="加工">PROCESS</span></button>
+                <button class="journal-stage-tab" type="button" role="tab" aria-selected="false" data-image="factory-site-03.jpg" data-index="02 / 03" data-title-en="Organised coil inventory" data-title-zh="有序卷材库存" data-copy-en="Coils are staged for identification, handling and downstream processing, making material status easier to verify before release." data-copy-zh="卷材按标识、搬运与后续加工需求进行存放，便于在放行前核对材料状态。">02 <span data-en="MATERIAL" data-zh="材料">MATERIAL</span></button>
+                <button class="journal-stage-tab" type="button" role="tab" aria-selected="false" data-image="factory-site-07.jpg" data-index="03 / 03" data-title-en="Controlled handling" data-title-zh="受控吊运作业" data-copy-en="On-site handling images demonstrate the scale of the facility and the practical coordination required for coils, plates and processing equipment." data-copy-zh="现场吊运画面展现了工厂规模，以及卷材、板材与加工设备之间所需的协同作业。">03 <span data-en="HANDLING" data-zh="吊运">HANDLING</span></button>
           </div>
         </div>
       </div>
@@ -397,52 +486,52 @@
       </div>
 
       <div class="journal-grid reveal" id="factoryJournalGrid">
-        <button class="journal-card journal-card--wide" type="button" data-journal-category="facility" data-source="assets/factory-journal/factory-overview.jpg" data-title-en="Additional factory floor" data-title-zh="新增工厂生产现场" data-copy-en="A wide view of the selected second production facility, including material zones and processing equipment." data-copy-zh="第二生产基地的广角实拍，呈现材料区域与加工设备布局。">
-          <img src="assets/factory-journal/factory-overview.jpg" alt="Wide view of stainless steel factory floor" loading="lazy">
+            <button class="journal-card journal-card--wide" type="button" data-journal-category="facility" data-source="factory-site-01.jpg" data-title-en="Additional factory floor" data-title-zh="新增工厂生产现场" data-copy-en="A wide view of the selected second production facility, including material zones and processing equipment." data-copy-zh="第二生产基地的广角实拍，呈现材料区域与加工设备布局。">
+              <img src="factory-site-01.jpg" alt="Wide view of stainless steel factory floor" loading="lazy">
           <span class="journal-card-info"><small>01 / FACILITY</small><strong data-en="Additional factory floor" data-zh="新增工厂生产现场">Additional factory floor</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
         </button>
-        <button class="journal-card" type="button" data-journal-category="material" data-source="assets/factory-journal/coil-inventory.jpg" data-title-en="Stainless coil inventory" data-title-zh="不锈钢卷材库存" data-copy-en="Coils staged for material identification, handling and production scheduling." data-copy-zh="卷材按材料识别、搬运与生产排程进行存放。">
-          <img src="assets/factory-journal/coil-inventory.jpg" alt="Stainless steel coils stored in the factory" loading="lazy">
+            <button class="journal-card" type="button" data-journal-category="material" data-source="factory-site-03.jpg" data-title-en="Stainless coil inventory" data-title-zh="不锈钢卷材库存" data-copy-en="Coils staged for material identification, handling and production scheduling." data-copy-zh="卷材按材料识别、搬运与生产排程进行存放。">
+              <img src="factory-site-03.jpg" alt="Stainless steel coils stored in the factory" loading="lazy">
           <span class="journal-card-info"><small>02 / MATERIAL</small><strong data-en="Stainless coil inventory" data-zh="不锈钢卷材库存">Stainless coil inventory</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
         </button>
-        <button class="journal-card" type="button" data-journal-category="process" data-source="assets/factory-journal/production-line.jpg" data-title-en="Production line" data-title-zh="加工生产线" data-copy-en="Dedicated equipment supports continuous coil and sheet processing operations." data-copy-zh="专业设备支持卷材与板材的连续加工。">
-          <img src="assets/factory-journal/production-line.jpg" alt="Industrial stainless steel production line" loading="lazy">
+            <button class="journal-card" type="button" data-journal-category="process" data-source="factory-site-02.jpg" data-title-en="Production line" data-title-zh="加工生产线" data-copy-en="Dedicated equipment supports continuous coil and sheet processing operations." data-copy-zh="专业设备支持卷材与板材的连续加工。">
+              <img src="factory-site-02.jpg" alt="Industrial stainless steel production line" loading="lazy">
           <span class="journal-card-info"><small>03 / PROCESS</small><strong data-en="Production line" data-zh="加工生产线">Production line</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
         </button>
-        <button class="journal-card" type="button" data-journal-category="material" data-source="assets/factory-journal/coil-layout.jpg" data-title-en="Coil storage layout" data-title-zh="卷材存储布局" data-copy-en="A visual record of coil availability across the production floor." data-copy-zh="直观展示生产现场卷材的储备与布局。">
-          <img src="assets/factory-journal/coil-layout.jpg" alt="Coils arranged inside a steel factory" loading="lazy">
+            <button class="journal-card" type="button" data-journal-category="material" data-source="factory-site-04.jpg" data-title-en="Coil storage layout" data-title-zh="卷材存储布局" data-copy-en="A visual record of coil availability across the production floor." data-copy-zh="直观展示生产现场卷材的储备与布局。">
+              <img src="factory-site-04.jpg" alt="Coils arranged inside a steel factory" loading="lazy">
           <span class="journal-card-info"><small>04 / MATERIAL</small><strong data-en="Coil storage layout" data-zh="卷材存储布局">Coil storage layout</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
         </button>
-        <button class="journal-card journal-card--tall" type="button" data-journal-category="process" data-source="assets/factory-journal/slitting-line.jpg" data-title-en="Slitting line" data-title-zh="分条生产线" data-copy-en="Equipment for processing coil material into customer-required widths." data-copy-zh="用于将卷材加工为客户所需宽度的生产设备。">
-          <img src="assets/factory-journal/slitting-line.jpg" alt="Stainless steel slitting line" loading="lazy">
+            <button class="journal-card journal-card--tall" type="button" data-journal-category="process" data-source="factory-site-05.jpg" data-title-en="Slitting line" data-title-zh="分条生产线" data-copy-en="Equipment for processing coil material into customer-required widths." data-copy-zh="用于将卷材加工为客户所需宽度的生产设备。">
+              <img src="factory-site-05.jpg" alt="Stainless steel slitting line" loading="lazy">
           <span class="journal-card-info"><small>05 / PROCESS</small><strong data-en="Slitting line" data-zh="分条生产线">Slitting line</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
         </button>
-        <button class="journal-card" type="button" data-journal-category="material" data-source="assets/factory-journal/coil-aisle.jpg" data-title-en="Coil handling aisle" data-title-zh="卷材搬运通道" data-copy-en="Clear aisles support practical access to material and equipment." data-copy-zh="清晰通道为材料与设备的作业衔接提供支持。">
-          <img src="assets/factory-journal/coil-aisle.jpg" alt="Stainless steel coil handling aisle" loading="lazy">
+            <button class="journal-card" type="button" data-journal-category="material" data-source="factory-site-06.jpg" data-title-en="Coil handling aisle" data-title-zh="卷材搬运通道" data-copy-en="Clear aisles support practical access to material and equipment." data-copy-zh="清晰通道为材料与设备的作业衔接提供支持。">
+              <img src="factory-site-06.jpg" alt="Stainless steel coil handling aisle" loading="lazy">
           <span class="journal-card-info"><small>06 / MATERIAL</small><strong data-en="Coil handling aisle" data-zh="卷材搬运通道">Coil handling aisle</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
         </button>
-        <button class="journal-card" type="button" data-journal-category="material" data-source="assets/factory-journal/warehouse-plates.jpg" data-title-en="Plate warehouse" data-title-zh="板材仓储区域" data-copy-en="Sheet and plate stock staged for inspection, conversion and delivery preparation." data-copy-zh="板材库存为检验、加工与交付准备而有序摆放。">
-          <img src="assets/factory-journal/warehouse-plates.jpg" alt="Stainless steel plates in warehouse" loading="lazy">
+            <button class="journal-card" type="button" data-journal-category="material" data-source="factory-site-07.jpg" data-title-en="Plate warehouse" data-title-zh="板材仓储区域" data-copy-en="Sheet and plate stock staged for inspection, conversion and delivery preparation." data-copy-zh="板材库存为检验、加工与交付准备而有序摆放。">
+              <img src="factory-site-07.jpg" alt="Stainless steel plates in warehouse" loading="lazy">
           <span class="journal-card-info"><small>07 / MATERIAL</small><strong data-en="Plate warehouse" data-zh="板材仓储区域">Plate warehouse</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
         </button>
-        <button class="journal-card journal-card--wide" type="button" data-journal-category="facility" data-source="assets/factory-journal/factory-aisle.jpg" data-title-en="Material flow route" data-title-zh="材料流转通道" data-copy-en="A broad production aisle connecting storage, processing and handling areas." data-copy-zh="连接仓储、加工与吊运区域的宽阔生产通道。">
-          <img src="assets/factory-journal/factory-aisle.jpg" alt="Wide stainless steel factory aisle" loading="lazy">
+            <button class="journal-card journal-card--wide" type="button" data-journal-category="facility" data-source="factory-site-01.jpg" data-title-en="Material flow route" data-title-zh="材料流转通道" data-copy-en="A broad production aisle connecting storage, processing and handling areas." data-copy-zh="连接仓储、加工与吊运区域的宽阔生产通道。">
+              <img src="factory-site-01.jpg" alt="Wide stainless steel factory aisle" loading="lazy">
           <span class="journal-card-info"><small>08 / FACILITY</small><strong data-en="Material flow route" data-zh="材料流转通道">Material flow route</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
         </button>
-        <button class="journal-card" type="button" data-journal-category="process" data-source="assets/factory-journal/protected-operation.jpg" data-title-en="Coil handling operation" data-title-zh="卷材吊运作业" data-copy-en="A selected on-site operation showing material movement near the processing line." data-copy-zh="精选现场作业画面，展示加工线附近的材料搬运过程。">
-          <img src="assets/factory-journal/protected-operation.jpg" alt="Worker handling stainless steel coil in factory" loading="lazy">
+            <button class="journal-card" type="button" data-journal-category="process" data-source="factory-site-07.jpg" data-title-en="Coil handling operation" data-title-zh="卷材吊运作业" data-copy-en="A selected on-site operation showing material movement near the processing line." data-copy-zh="精选现场作业画面，展示加工线附近的材料搬运过程。">
+              <img src="factory-site-07.jpg" alt="Worker handling stainless steel coil in factory" loading="lazy">
           <span class="journal-card-info"><small>09 / HANDLING</small><strong data-en="Coil handling operation" data-zh="卷材吊运作业">Coil handling operation</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
         </button>
-        <button class="journal-card" type="button" data-journal-category="process" data-source="assets/factory-journal/operations-console.jpg" data-title-en="Processing controls" data-title-zh="加工控制区域" data-copy-en="A closer view of controls and machinery used for production coordination." data-copy-zh="近距离呈现用于生产协同的控制系统与设备。">
-          <img src="assets/factory-journal/operations-console.jpg" alt="Industrial machine control station" loading="lazy">
+            <button class="journal-card" type="button" data-journal-category="process" data-source="factory-site-06.jpg" data-title-en="Processing controls" data-title-zh="加工控制区域" data-copy-en="A closer view of controls and machinery used for production coordination." data-copy-zh="近距离呈现用于生产协同的控制系统与设备。">
+              <img src="factory-site-06.jpg" alt="Industrial machine control station" loading="lazy">
           <span class="journal-card-info"><small>10 / PROCESS</small><strong data-en="Processing controls" data-zh="加工控制区域">Processing controls</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
         </button>
-        <button class="journal-card" type="button" data-journal-category="process" data-source="assets/factory-journal/workstation.jpg" data-title-en="Processing workstation" data-title-zh="加工工位" data-copy-en="Equipment and workstations positioned for daily material conversion work." data-copy-zh="为日常材料加工配置的设备与作业工位。">
-          <img src="assets/factory-journal/workstation.jpg" alt="Steel processing workstation" loading="lazy">
+            <button class="journal-card" type="button" data-journal-category="process" data-source="factory-site-05.jpg" data-title-en="Processing workstation" data-title-zh="加工工位" data-copy-en="Equipment and workstations positioned for daily material conversion work." data-copy-zh="为日常材料加工配置的设备与作业工位。">
+              <img src="factory-site-05.jpg" alt="Steel processing workstation" loading="lazy">
           <span class="journal-card-info"><small>11 / PROCESS</small><strong data-en="Processing workstation" data-zh="加工工位">Processing workstation</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
         </button>
-        <button class="journal-card" type="button" data-journal-category="facility" data-source="assets/factory-journal/coil-handling.jpg" data-title-en="Production environment" data-title-zh="生产环境实拍" data-copy-en="A real on-site view of coil processing equipment and factory scale." data-copy-zh="真实呈现卷材加工设备与工厂规模。">
-          <img src="assets/factory-journal/coil-handling.jpg" alt="Coil processing equipment in factory" loading="lazy">
+            <button class="journal-card" type="button" data-journal-category="facility" data-source="factory-site-04.jpg" data-title-en="Production environment" data-title-zh="生产环境实拍" data-copy-en="A real on-site view of coil processing equipment and factory scale." data-copy-zh="真实呈现卷材加工设备与工厂规模。">
+              <img src="factory-site-04.jpg" alt="Coil processing equipment in factory" loading="lazy">
           <span class="journal-card-info"><small>12 / FACILITY</small><strong data-en="Production environment" data-zh="生产环境实拍">Production environment</strong><em data-en="Open image" data-zh="查看图片">Open image</em></span>
         </button>
       </div>
@@ -596,6 +685,27 @@
           <label><span data-zh="电话 / WhatsApp" data-en="Phone / WhatsApp">电话 / WhatsApp</span><input type="tel" name="phone" autocomplete="tel"></label>
         </div>
         <label><span data-zh="材料需求 *" data-en="Material Requirements *">材料需求 *</span><textarea name="message" required placeholder="304 / 1.0mm / 1000mm / 2B / 20 MT ..."></textarea></label>
+        <div class="field-row alloy-rfq-fields">
+          <label><span data-en="Material Family" data-zh="材料系列">Material Family</span><select name="material_family">
+            <option value="">Select / 请选择</option>
+            <option value="Duplex / Super Austenitic">Duplex / Super Austenitic</option>
+            <option value="Super Austenitic / Nickel Alloy">Super Austenitic / Nickel Alloy</option>
+            <option value="Nickel Alloy">Nickel Alloy</option>
+            <option value="Precision Alloy">Precision Alloy</option>
+            <option value="Stainless Steel">Stainless Steel</option>
+          </select></label>
+          <label><span data-en="Product Form" data-zh="产品形态">Product Form</span><select name="product_form">
+            <option value="">Select / 请选择</option>
+            <option value="Plate / Sheet / Coil">Plate / Sheet / Coil</option>
+            <option value="Plate / Sheet">Plate / Sheet</option>
+            <option value="Plate / Sheet / Strip">Plate / Sheet / Strip</option>
+            <option value="Coil / Strip">Coil / Strip</option>
+          </select></label>
+        </div>
+        <div class="field-row alloy-rfq-fields">
+          <label><span data-en="Grade / Standard" data-zh="牌号 / 标准">Grade / Standard</span><input name="grade_spec" placeholder="e.g. N06625 / ASTM B443"></label>
+          <label><span data-en="Service Conditions" data-zh="服役工况">Service Conditions</span><input name="service_conditions" placeholder="Media / temperature / pressure"></label>
+        </div>
         <p class="form-privacy" data-zh="您的信息仅用于回复本次询盘。" data-en="Your information will only be used to respond to this inquiry.">您的信息仅用于回复本次询盘。</p>
         <button class="btn primary" type="submit"><span data-zh="提交询价" data-en="Send Inquiry">提交询价</span><b>↗</b></button>
         <p id="formNote" class="form-status" role="status" aria-live="polite"></p>
@@ -609,5 +719,6 @@
 <script src="factory-journal.js"></script>
   <script src="interactive-buyer.js"></script>
   <script src="experience-v3.js"></script>
+  <script src="advanced-alloys.js"></script>
 </body>
 </html>

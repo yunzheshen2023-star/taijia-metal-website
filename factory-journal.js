@@ -67,7 +67,7 @@
     }
   ];
 
-  const stageItems = [photos[0], photos[1], photos[2]];
+  const stageItems = [photos[1], photos[2], photos[6]];
   const state = { filter: "all", visible: photos.slice(), activeIndex: 0 };
 
   const $ = (selector, root = document) => root.querySelector(selector);
