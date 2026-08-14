@@ -1,14 +1,18 @@
 (() => {
-  const cards = [...document.querySelectorAll('.factory-card')];
+  const factoryCards = [...document.querySelectorAll('.factory-card')];
+  const materialCards = [...document.querySelectorAll('.advisor-orbit[data-factory-src]')];
+  const galleries = [factoryCards, materialCards].filter((gallery) => gallery.length);
   const box = document.getElementById('factoryLightbox');
-  if (!cards.length || !box) return;
+  if (!galleries.length || !box) return;
 
   const image = document.getElementById('factoryLightboxImage');
   const caption = document.getElementById('factoryLightboxCaption');
   const closeButton = box.querySelector('.factory-lightbox-close');
   const previous = box.querySelector('.factory-lightbox-nav.prev');
   const next = box.querySelector('.factory-lightbox-nav.next');
+  let cards = galleries[0];
   let current = 0;
+  let lastTrigger = null;
   let touchStartX = 0;
 
   const currentLanguage = () => document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
@@ -18,11 +22,14 @@
     const language = currentLanguage();
     image.src = card.dataset.factorySrc;
     image.alt = card.querySelector('img').alt;
+    image.classList.toggle('is-flipped-x', card.dataset.imageFlip === 'horizontal');
     caption.textContent = card.dataset[`caption${language[0].toUpperCase()}${language.slice(1)}`];
   }
 
-  function open(index) {
+  function open(gallery, index) {
+    cards = gallery;
     current = (index + cards.length) % cards.length;
+    lastTrigger = cards[current];
     render();
     box.classList.add('open');
     box.setAttribute('aria-hidden', 'false');
@@ -34,7 +41,7 @@
     box.classList.remove('open');
     box.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
-    cards[current]?.focus({ preventScroll: true });
+    lastTrigger?.focus({ preventScroll: true });
   }
 
   function change(step) {
@@ -42,13 +49,15 @@
     render();
   }
 
-  cards.forEach((card, index) => {
-    card.addEventListener('click', () => open(index));
-    card.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        open(index);
-      }
+  galleries.forEach((gallery) => {
+    gallery.forEach((card, index) => {
+      card.addEventListener('click', () => open(gallery, index));
+      card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          open(gallery, index);
+        }
+      });
     });
   });
 

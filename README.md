@@ -1,44 +1,28 @@
-# 泰嘉金属官网｜彩色客户 Logo 更新版
+# 泰嘉金属网站 GitHub 完整覆盖包
 
-这是已确认的“原网站 + 彩色合作公司 Logo”版本。除新增客户展示板块外，没有采用后续的多页改版或专业优化方案。
+版本：2026-08-15
 
-## 本次新增内容
+本包对应已确认的原版单页网站，包含：
 
-- 河南明泰铝业
-- 上海思源电气
-- 上海通用（上汽通用）
-- 上海大众（上汽大众）
-- 上海三菱电梯
-- 西南铝业
-
-Logo 采用彩色展示，并保留中英文切换及电脑、平板、手机响应式布局。
+- 河南明泰铝业、上海思源电气、上海通用、大众、上海三菱电梯、西南铝业六家彩色 Logo；
+- 已修复并改为本地文件的 Logo 路径；
+- 304、316L、409L、430 四张材料表面图片；
+- 材料图片点击放大、左右切换、关闭按钮、点击遮罩关闭、Esc 退出；
+- 当前网站所需的全部 CSS、JavaScript、图片、证书和公司资料 PDF。
 
 ## 上传到 GitHub
 
-1. 解压 ZIP。
-2. 打开解压后的文件夹，确认最外层可以直接看到 `index.html`。
-3. 在 GitHub 仓库点击 **Add file → Upload files**。
-4. 上传解压目录中的全部文件和文件夹，不要只上传 `index.html`。
-5. 提交后确认仓库根目录仍可直接看到 `index.html`、`styles.css`、`assets/` 和 `partners/`。
+1. 先解压本 ZIP。
+2. 打开解压后的文件夹，确认最外层直接能看到 `index.html`。
+3. 在 GitHub 仓库中选择 **Add file → Upload files**。
+4. 将解压后文件夹里的“全部内容”上传到仓库根目录，同名文件选择覆盖。
+5. 提交更改，等待 Netlify 自动重新部署。
 
-如果是更新现有仓库，上传全部内容并让同名文件替换旧版本即可。建议先在 GitHub 创建一个备份分支。
+必须保持 `assets/`、`downloads/`、`partners/` 的目录结构不变。不要把 ZIP 文件本身直接上传，也不要在仓库根目录外再套一层文件夹。
 
-## Netlify 从 GitHub 发布
+## Netlify 设置
 
-选择该 GitHub 仓库后使用以下设置：
+- Build command：留空
+- Publish directory：`.`
 
-```text
-Base directory: 留空
-Build command: 留空
-Publish directory: .
-```
-
-这是纯静态网站，不需要运行 npm、pnpm 或其他构建命令。GitHub `main` 分支更新后，Netlify 会自动重新发布。
-
-## 重要说明
-
-- `index.html` 必须位于仓库根目录。
-- `customer-logos.css` 和整个 `partners/` 文件夹都必须上传，否则客户 Logo 板块无法完整显示。
-- GitHub Pages 可以展示网页，但原询价表单依赖 Netlify Forms；需要通过 Netlify 发布才能继续使用该表单功能。
-- 客户名称和商标归各自权利人所有，仅用于说明既往服务关系。
-
+建议上传前在 GitHub 建立一个备份分支。上线后请检查首页、六家 Logo、四张材料图及图片放大操作。
