@@ -120,7 +120,8 @@ body{background:#f7f9f8;color:var(--ink)}
 .quality{background:#f1f5f3;color:#17231f}
 .quality-visual:after{background:linear-gradient(90deg,transparent 57%,#f1f5f3)}
 .quality-copy>p:not(.eyebrow){color:#5d6f68}
-.quality-steps div{border-color:#d4dfda}.quality-steps b{color:#0a7059}
+.quality-steps div{color:#40534c;border-color:#d4dfda}.quality-steps b{color:#0a7059}
+.quality .eyebrow{color:#0a7059}
 .certification{background:#fff}.cert-gallery figure{background:#f4f7f5;box-shadow:0 16px 45px rgba(25,52,44,.07)}
 
 /* Contact keeps one strong anchor while the site remains predominantly white */

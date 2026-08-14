@@ -1,0 +1,170 @@
+.client-proof {
+  position: relative;
+  overflow: hidden;
+  background: #f3f5f4 !important;
+}
+
+.client-proof::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 7vw;
+  width: 86vw;
+  height: 1px;
+  background: var(--line);
+}
+
+.client-proof-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, .8fr);
+  align-items: end;
+  gap: 8%;
+  margin-bottom: 58px;
+}
+
+.client-proof-head h2 {
+  max-width: 780px;
+  margin: 18px 0 0;
+  font-size: clamp(38px, 4vw, 60px);
+  line-height: 1.16;
+  letter-spacing: -2px;
+}
+
+.client-proof-head > p {
+  max-width: 500px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.client-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  background: #fff;
+}
+
+.client-logo-card {
+  position: relative;
+  min-width: 0;
+  min-height: 238px;
+  padding: 26px 20px 22px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.client-logo-card::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  width: 22px;
+  height: 2px;
+  background: var(--green);
+  transform: scaleX(.32);
+  transform-origin: right;
+  transition: transform .3s ease;
+}
+
+.client-logo-card:hover {
+  z-index: 2;
+  transform: translateY(-5px);
+  box-shadow: 0 22px 46px rgba(11, 44, 35, .11);
+  border-color: rgba(10, 112, 89, .36);
+}
+
+.client-logo-card:hover::after {
+  transform: scaleX(1);
+}
+
+.client-logo-stage {
+  height: 108px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  padding: 10px 4px;
+}
+
+.client-logo-stage img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 72px;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+.client-logo-card--gm .client-logo-stage img {
+  max-height: 88px;
+}
+
+.client-logo-card--gm .client-logo-stage img.is-fallback {
+  width: 64px;
+  height: 64px;
+  image-rendering: auto;
+}
+
+.client-logo-card--vw .client-logo-stage img {
+  width: 68px;
+  height: 68px;
+  image-rendering: auto;
+}
+
+.client-logo-card strong,
+.client-logo-card small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.client-logo-card strong {
+  min-height: 38px;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.client-logo-card small {
+  margin-top: 7px;
+  padding-right: 18px;
+  color: #84918d;
+  font-size: 7px;
+  line-height: 1.4;
+  letter-spacing: .9px;
+}
+
+.client-logo-note {
+  margin: 22px 0 0;
+  color: #83908c;
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+@media (max-width: 1120px) {
+  .client-logo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 820px) {
+  .client-proof-head { grid-template-columns: 1fr; gap: 24px; }
+  .client-proof-head > p { max-width: 650px; }
+  .client-logo-card { min-height: 220px; }
+}
+
+@media (max-width: 560px) {
+  .client-logo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .client-logo-card { min-height: 210px; padding: 22px 15px 20px; }
+  .client-logo-stage { height: 92px; margin-bottom: 18px; }
+  .client-logo-stage img { max-height: 60px; }
+  .client-logo-card--gm .client-logo-stage img { max-height: 72px; }
+  .client-logo-card--vw .client-logo-stage img { width: 58px; height: 58px; }
+  .client-logo-card strong { min-height: 36px; font-size: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .client-logo-card { transition: none; }
+}
